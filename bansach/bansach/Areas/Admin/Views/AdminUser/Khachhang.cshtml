@@ -1,0 +1,66 @@
+﻿@model IEnumerable<bansach.Models.User>
+
+@{
+    ViewBag.Title = "Khachhang";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IDuser)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tk)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HoTen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sdt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Thanhvien)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TrangThai)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDuser)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tk)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sdt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Thanhvien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TrangThai)
+                    </td>
+                    <td>
+                        <a href="/Admin/AdminUser/EditKH/@item.IDuser"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

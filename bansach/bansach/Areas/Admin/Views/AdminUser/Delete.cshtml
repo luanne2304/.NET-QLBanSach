@@ -1,0 +1,97 @@
+﻿@model bansach.Models.User
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sdt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sdt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tichluy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tichluy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thanhvien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thanhvien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDrole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDrole)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

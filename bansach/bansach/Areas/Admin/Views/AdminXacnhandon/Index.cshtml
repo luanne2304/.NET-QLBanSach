@@ -1,0 +1,101 @@
+﻿@model List<bansach.DTO.HoadonDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <table class="table">
+            <tr>
+                <th>
+                    IDhoadon
+                </th>
+                <th>
+                    IDuser
+                </th>
+                <th>
+                    IDvoucher
+                </th>
+                <th>
+                    Ghichu
+                </th>
+                <th>
+                    Tongtien
+                </th>
+                <th>
+                    Thanhtien
+                </th>
+                <th>
+                    Ngaydat
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDhoadon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDuser)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDvoucher)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ghichu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tongtien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Thanhtien)
+                    </td>
+                    <td>
+                        @item.Ngaydat.ToShortDateString()
+                    </td>
+                    <td>
+                        <a href="/Admin/AdminXacnhandon/Check/@item.IDhoadon"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
+                        <a href="/Admin/AdminXacnhandon/CheckIndex?idhd=@item.IDhoadon&status=Khongxacnhan"><i class="fa-solid fa-ban fa-lg" style="color: #bc1010;"></i></a>
+                        <a href="/Admin/AdminXacnhandon/CheckIndex?idhd=@item.IDhoadon&status=Xacnhan"><i class="fa-solid fa-check-to-slot  fa-lg" style="color: #04ae1a;"></i></a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+@section scripts{
+    @if (!string.IsNullOrEmpty(ViewBag.StatusMessage))
+    {
+        <script>
+            var statusMessage = "@ViewBag.StatusMessage";
+            if (statusMessage == "xacnhanthanhcong")
+            {
+                swal({
+                title: 'Thành công',
+                        text: 'Xác nhận thành công!',
+                        icon: 'success',
+                        button: 'OK'
+                    });
+            }
+            if (statusMessage == "huydon") {
+                swal({
+                    title: 'Thành công',
+                    text: 'Hủy đơn thành công!',
+                    icon: 'success',
+                    button: 'OK'
+                });
+            }
+            if (statusMessage == "xacnhanthatbai") {
+                swal({
+                    title: "Lỗi!",
+                    text: "Số lượng sách trong kho không đủ",
+                    icon: "error",
+                    confirmButtonText: "OK"
+                });
+            }
+        </script>
+    }
+}

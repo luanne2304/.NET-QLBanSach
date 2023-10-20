@@ -1,0 +1,448 @@
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\bansach.dll.config
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\bansach.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\bansach.pdb
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\csc.exe
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\csc.exe.config
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\csc.rsp
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\csi.exe
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\csi.exe.config
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\csi.rsp
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.AppContext.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Collections.Immutable.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Console.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Globalization.Calendars.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.Compression.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.FileSystem.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Net.Http.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Net.Sockets.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Reflection.Metadata.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.ValueTuple.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XPath.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\vbc.exe
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\vbc.exe.config
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\vbc.rsp
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\VBCSCompiler.exe
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\roslyn\VBCSCompiler.exe.config
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Antlr3.Runtime.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\EntityFramework.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\EntityFramework.SqlServer.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Google.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Web.Infrastructure.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Newtonsoft.Json.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Owin.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.Helpers.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.Mvc.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.Optimization.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.Razor.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Deployment.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Razor.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\WebGrease.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.Helpers.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.Mvc.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.Optimization.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.Razor.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Deployment.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Razor.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Newtonsoft.Json.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Antlr3.Runtime.pdb
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\EntityFramework.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\EntityFramework.SqlServer.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Google.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.AssemblyReference.cache
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.CoreCompileInputs.cache
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.CopyComplete
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\obj\Debug\bansach.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\obj\Debug\bansach.pdb
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\bansach.dll.config
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\bansach.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\bansach.pdb
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\csc.exe
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\csc.exe.config
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\csc.rsp
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\csi.exe
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\csi.exe.config
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\csi.rsp
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Managed.Core.targets
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.AppContext.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Collections.Immutable.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Console.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Globalization.Calendars.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.Compression.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.FileSystem.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Net.Http.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Net.Sockets.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Reflection.Metadata.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.ValueTuple.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XmlDocument.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XPath.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\vbc.exe
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\vbc.exe.config
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\vbc.rsp
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\VBCSCompiler.exe
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\roslyn\VBCSCompiler.exe.config
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Antlr3.Runtime.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\EntityFramework.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\EntityFramework.SqlServer.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Core.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Cookies.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Facebook.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Google.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.OAuth.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Twitter.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Web.Infrastructure.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Newtonsoft.Json.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Owin.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.Helpers.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.Mvc.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.Optimization.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.Razor.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Deployment.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Razor.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\WebGrease.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.Helpers.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.Mvc.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.Optimization.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.Razor.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Deployment.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Razor.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Newtonsoft.Json.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Antlr3.Runtime.pdb
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\EntityFramework.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\EntityFramework.SqlServer.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Core.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Facebook.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Cookies.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Google.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Twitter.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.OAuth.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.AssemblyReference.cache
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.CoreCompileInputs.cache
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.CopyComplete
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\obj\Debug\bansach.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\obj\Debug\bansach.pdb
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\PagedList.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\PagedList.Mvc.dll
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\PagedList.xml
+D:\Nam 3 HK 2\Đồ án\ASP bán sách\bansach\bansach\bin\PagedList.Mvc.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\PagedList.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\PagedList.Mvc.dll
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\PagedList.xml
+D:\HK2 Nam3\DoAn\ASP bán sách\bansach\bansach\bin\PagedList.Mvc.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\bansach.dll.config
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\bansach.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\bansach.pdb
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\csc.exe
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\csc.exe.config
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\csc.rsp
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\csi.exe
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\csi.exe.config
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\csi.rsp
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.AppContext.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Console.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.Compression.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Net.Http.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Net.Sockets.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.ValueTuple.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XPath.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\vbc.exe
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\vbc.exe.config
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\vbc.rsp
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\VBCSCompiler.exe
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Antlr3.Runtime.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\EntityFramework.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\EntityFramework.SqlServer.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Newtonsoft.Json.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Owin.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\PagedList.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\PagedList.Mvc.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.Helpers.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.Mvc.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.Optimization.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.Razor.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Deployment.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Razor.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\WebGrease.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\PagedList.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\PagedList.Mvc.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.Helpers.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.Mvc.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.Optimization.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.Razor.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Deployment.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Razor.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Newtonsoft.Json.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Antlr3.Runtime.pdb
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\EntityFramework.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\EntityFramework.SqlServer.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.AssemblyReference.cache
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.CoreCompileInputs.cache
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.CopyComplete
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\obj\Debug\bansach.dll
+C:\Users\GIGABYTE\Desktop\ASP bán sách\bansach\bansach\obj\Debug\bansach.pdb
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\bansach.dll.config
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\bansach.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\bansach.pdb
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\csc.exe
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\csc.exe.config
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\csc.rsp
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\csi.exe
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\csi.exe.config
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\csi.rsp
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.AppContext.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Collections.Immutable.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Console.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Globalization.Calendars.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.Compression.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.FileSystem.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Net.Http.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Net.Sockets.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Reflection.Metadata.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.ValueTuple.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XPath.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\vbc.exe
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\vbc.exe.config
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\vbc.rsp
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\VBCSCompiler.exe
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\roslyn\VBCSCompiler.exe.config
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Antlr3.Runtime.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\EntityFramework.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\EntityFramework.SqlServer.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Google.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Web.Infrastructure.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Newtonsoft.Json.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Owin.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\PagedList.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\PagedList.Mvc.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.Helpers.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.Mvc.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.Optimization.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.Razor.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Deployment.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Razor.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\WebGrease.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\PagedList.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\PagedList.Mvc.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.Helpers.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.Mvc.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.Optimization.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.Razor.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Deployment.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\System.Web.WebPages.Razor.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Newtonsoft.Json.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Antlr3.Runtime.pdb
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\EntityFramework.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\EntityFramework.SqlServer.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Google.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.AssemblyReference.cache
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.CoreCompileInputs.cache
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\obj\Debug\bansach.csproj.CopyComplete
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\obj\Debug\bansach.dll
+D:\Nam 3 HK 2\Đồ án\PRO\ASP bán sách\bansach\bansach\obj\Debug\bansach.pdb

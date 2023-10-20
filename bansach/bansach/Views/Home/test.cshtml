@@ -1,0 +1,98 @@
+﻿@using bansach.Models
+@using PagedList.Mvc
+@model PagedList.PagedList<Sach>
+
+@{
+    ViewBag.Title = "test";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<div class="row flex-row-reverse">
+    <div class="col-lg-9">
+        <div class="shop-page-wrap">
+            <div class="padding-54-row-col">
+                <div class="row">
+                    @foreach (var i in Model)
+                    {
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-75">
+                            <div class="product-wrap" data-aos="fade-up" data-aos-delay="200">
+                                <div class="product-img img-zoom mb-4">
+                                    <a href="product-details.html">
+                                        <img style="height:400px; width:350px" class="default-img" src="~/Content/AnhSP/@i.Hinhanh" alt="">
+                                    </a>
+                                    <div class="product-action-wrap">
+                                        <button data-id="@i.IDsach" class="add-to-cart-click" title="Add To Cart"><img class="injectable" src="~/Content/assets2/images/icon-img/bag-2.svg" alt=""></button>
+                                    </div>
+                                </div>
+                                <div class="product-content text-center">
+                                    <h3>@i.Tensach</h3>
+                                    <h4>Auth: @i.Tacgia</h4>
+                                    <div class="product-price">
+                                        <span>@i.Gia vnd</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="pagination-style text-center mt-30" data-aos="fade-up" data-aos-delay="200">
+                <div class="MenuTrang">
+                    @Html.PagedListPager(Model, page => Url.Action("test", new { page = page }))
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="sidebar-wrapper sidebar-wrapper-mr">
+            <div class="sidebar-widget mb-80" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="sidebar-widget-title">Featured Category </h3>
+                <div class="shop-category">
+                    <ul>
+                        <li style="display: flex; justify-content: center; /* Canh giữa theo chiều ngang */ align-items: center; ">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="find-sach">
+                            <i onclick="searchProduct()" class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                        @foreach (var item in ViewBag.loai as List<bansach.Models.Loai>)
+                        {
+                            <li><a href="/Home/ListProduct?cate=@item.IDloai">@item.Tenloai</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<ul class="notifications"></ul>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $(".add-to-cart-click").click(function () {
+                var model = {};
+                model.idsach = $(this).data("id");
+                model.soluong = 1;
+                $.ajax({
+                    type: "POST",
+                    url: "/Cart/Addtocart",
+                    data: JSON.stringify(model),
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        if (data.success == true) {
+                            document.getElementById('soluongtronggio').innerHTML = data.Cartcount;
+                            alertsuccess('success');
+                        }
+                        else {
+                            window.location.href = '/Home/Login';
+                        }
+                    },
+                    error: function (data) {
+                        alertsuccess('error')
+                    }
+                });
+            });
+        });
+
+
+    </script>
+}

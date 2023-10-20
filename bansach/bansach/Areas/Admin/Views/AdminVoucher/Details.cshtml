@@ -1,0 +1,51 @@
+﻿@model bansach.Models.Voucher
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Voucher</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenvoucher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenvoucher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chietkhau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chietkhau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trangthai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDvoucher }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

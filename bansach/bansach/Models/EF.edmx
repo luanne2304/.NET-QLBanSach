@@ -1,0 +1,1523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TiemsachcuaLuanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.ChitietHD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ChitietHD">
+          <Key>
+            <PropertyRef Name="IDhoadon" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Soluong" />
+            <PropertyRef Name="Tongdongia" />
+          </Key>
+          <Property Name="IDhoadon" Type="int" Nullable="false" />
+          <Property Name="IDsach" Type="int" Nullable="false" />
+          <Property Name="Soluong" Type="int" Nullable="false" />
+          <Property Name="Tongdongia" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.Chitietkho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Chitietkho">
+          <Key>
+            <PropertyRef Name="IDkho" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Soluong" />
+          </Key>
+          <Property Name="IDkho" Type="int" Nullable="false" />
+          <Property Name="IDsach" Type="int" Nullable="false" />
+          <Property Name="Soluong" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.Chitietsach' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Chitietsach">
+          <Key>
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="IDloai" />
+          </Key>
+          <Property Name="IDsach" Type="int" Nullable="false" />
+          <Property Name="IDloai" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.Danhgia' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Danhgia">
+          <Key>
+            <PropertyRef Name="IDuser" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Chitietrv" />
+          </Key>
+          <Property Name="Ngayrv" Type="datetime" />
+          <Property Name="IDuser" Type="int" Nullable="false" />
+          <Property Name="IDsach" Type="int" Nullable="false" />
+          <Property Name="Chitietrv" Type="nvarchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.Giohang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Giohang">
+          <Key>
+            <PropertyRef Name="IDuser" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Soluong" />
+          </Key>
+          <Property Name="IDuser" Type="int" Nullable="false" />
+          <Property Name="IDsach" Type="int" Nullable="false" />
+          <Property Name="Soluong" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Hoadon">
+          <Key>
+            <PropertyRef Name="IDhoadon" />
+          </Key>
+          <Property Name="IDhoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDuser" Type="int" Nullable="false" />
+          <Property Name="IDvoucher" Type="varchar" MaxLength="20" />
+          <Property Name="Ghichu" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Tongtien" Type="float" Nullable="false" />
+          <Property Name="Thanhtien" Type="float" Nullable="false" />
+          <Property Name="Ngaydat" Type="date" Nullable="false" />
+          <Property Name="Ngaydukiengiao" Type="date" />
+          <Property Name="Ngaygiao" Type="date" />
+          <Property Name="IDtinhtrang" Type="int" Nullable="false" />
+          <Property Name="IDtaixe" Type="int" />
+          <Property Name="Diachi" Type="ntext" Nullable="false" />
+          <Property Name="TienShip" Type="float" Nullable="false" />
+          <Property Name="IDthanhtoan" Type="int" />
+          <Property Name="Danhgia" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kho">
+          <Key>
+            <PropertyRef Name="IDkho" />
+          </Key>
+          <Property Name="IDkho" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tenkho" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Diachikho" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Trangthai" Type="bit" Nullable="false" />
+          <Property Name="Trungtam" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Loai">
+          <Key>
+            <PropertyRef Name="IDloai" />
+          </Key>
+          <Property Name="IDloai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tenloai" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sach">
+          <Key>
+            <PropertyRef Name="IDsach" />
+          </Key>
+          <Property Name="IDsach" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tensach" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Tacgia" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mota" Type="ntext" Nullable="false" />
+          <Property Name="Gia" Type="float" Nullable="false" />
+          <Property Name="Hinhanh" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="Trangthai" Type="bit" Nullable="false" />
+          <Property Name="LuotXem" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Thanhtoan">
+          <Key>
+            <PropertyRef Name="IDthanhtoan" />
+          </Key>
+          <Property Name="IDthanhtoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tenphuongthuc" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TinhtrangHD">
+          <Key>
+            <PropertyRef Name="IDtinhtrangHD" />
+          </Key>
+          <Property Name="IDtinhtrangHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TentinhtrangHD" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IDuser" />
+          </Key>
+          <Property Name="IDuser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tk" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mk" Type="varchar" MaxLength="255" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mail" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sdt" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Tichluy" Type="float" Nullable="false" />
+          <Property Name="Thanhvien" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDrole" Type="int" Nullable="false" />
+          <Property Name="TrangThai" Type="bit" Nullable="false" />
+          <Property Name="TokenActive" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Voucher">
+          <Key>
+            <PropertyRef Name="IDvoucher" />
+          </Key>
+          <Property Name="IDvoucher" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Tenvoucher" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Chietkhau" Type="float" Nullable="false" />
+          <Property Name="Soluong" Type="int" Nullable="false" />
+          <Property Name="Trangthai" Type="bit" Nullable="false" />
+        </EntityType>
+        <Function Name="sp_addchitietsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idsach" Type="int" Mode="In" />
+          <Parameter Name="idloai" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_addsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Tensach" Type="nvarchar" Mode="In" />
+          <Parameter Name="Tacgia" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mota" Type="ntext" Mode="In" />
+          <Parameter Name="Gia" Type="float" Mode="In" />
+          <Parameter Name="Hinhanh" Type="varchar" Mode="In" />
+          <Parameter Name="Soluong" Type="int" Mode="In" />
+          <Parameter Name="Trangthai" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_bomhang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idshiper" Type="int" Mode="In" />
+          <Parameter Name="idbill" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_botragiohang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iduser" Type="int" Mode="In" />
+          <Parameter Name="idsach" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_checkcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idvoucher" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_chuyenkho" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idkhodi" Type="int" Mode="In" />
+          <Parameter Name="idkhoden" Type="int" Mode="In" />
+          <Parameter Name="idsach" Type="int" Mode="In" />
+          <Parameter Name="soluong" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_dangki" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Tk" Type="varchar" Mode="In" />
+          <Parameter Name="Mk" Type="varchar" Mode="In" />
+          <Parameter Name="Hoten" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mail" Type="varchar" Mode="In" />
+          <Parameter Name="Sdt" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_danhanhang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+          <Parameter Name="IDhoadon" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_danhgia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+          <Parameter Name="IDsach" Type="int" Mode="In" />
+          <Parameter Name="Chitietrv" Type="nvarchar" Mode="In" />
+          <Parameter Name="IDhoadon" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_deletechitietsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idsach" Type="int" Mode="In" />
+          <Parameter Name="idloai" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_doipass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+          <Parameter Name="oldpass" Type="nvarchar" Mode="In" />
+          <Parameter Name="newpass" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_dongdanhgia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+          <Parameter Name="IDhoadon" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_editprofile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+          <Parameter Name="Hoten" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mail" Type="varchar" Mode="In" />
+          <Parameter Name="Sdt" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_editsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="ten" Type="nvarchar" Mode="In" />
+          <Parameter Name="tgia" Type="nvarchar" Mode="In" />
+          <Parameter Name="mota" Type="ntext" Mode="In" />
+          <Parameter Name="gia" Type="float" Mode="In" />
+          <Parameter Name="img" Type="varchar" Mode="In" />
+          <Parameter Name="trangthai" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="sp_hoanthanhgiao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idshiper" Type="int" Mode="In" />
+          <Parameter Name="idbill" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadbilldbyiduser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadchitiethoadon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadchitietkhobyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idkho" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadchitietsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadDanhgiabyIDsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDsach" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadgiohang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iduser" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadhdxacnhan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_loadhoadon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_loadhoadonchuaxuly" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_loadIDsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+          <Parameter Name="IDhoadon" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadinfobilldbyiduser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+          <Parameter Name="IDhoadon" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadlistkho" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_loadlistkhohoatdong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idkho" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadloaisach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_loadlstdondagiao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idshiper" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadlstdondahuy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idshiper" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadlstdondanhan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idshiper" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadsachbyID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDsach" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadshipperfull" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_loadshipperhoatdong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_loadsphoatdong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_loadtheloaibyIDsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDsach" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_loadvoucherhoatdong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Tk" Type="varchar" Mode="In" />
+          <Parameter Name="Mk" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_phanviec" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iduser" Type="int" Mode="In" />
+          <Parameter Name="idbill" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_soluongtronggio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iduser" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_thanhtoan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iduser" Type="int" Mode="In" />
+          <Parameter Name="idthanhtoan" Type="int" Mode="In" />
+          <Parameter Name="diachi" Type="ntext" Mode="In" />
+          <Parameter Name="ghichu" Type="nvarchar" Mode="In" />
+          <Parameter Name="idvoucher" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_themvaogiohang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iduser" Type="int" Mode="In" />
+          <Parameter Name="idsach" Type="int" Mode="In" />
+          <Parameter Name="soluong" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_updategiohang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="iduser" Type="int" Mode="In" />
+          <Parameter Name="idsach" Type="int" Mode="In" />
+          <Parameter Name="soluong" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_UpdateHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="int" Mode="In" />
+          <Parameter Name="idtinhtrang" Type="int" Mode="In" />
+          <Parameter Name="ngaydukien" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_xacnhandon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="int" Mode="In" />
+          <Parameter Name="ngaydukien" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_xacnhandonauto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idhd" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_yeucauhoanhang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDuser" Type="int" Mode="In" />
+          <Parameter Name="IDhoadon" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="TiemsachcuaLuanModelStoreContainer">
+          <EntitySet Name="Hoadon" EntityType="Self.Hoadon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kho" EntityType="Self.Kho" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Loai" EntityType="Self.Loai" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sach" EntityType="Self.Sach" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Thanhtoan" EntityType="Self.Thanhtoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TinhtrangHD" EntityType="Self.TinhtrangHD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Voucher" EntityType="Self.Voucher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChitietHD" EntityType="Self.ChitietHD" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ChitietHD].[IDhoadon] AS [IDhoadon], 
+    [ChitietHD].[IDsach] AS [IDsach], 
+    [ChitietHD].[Soluong] AS [Soluong], 
+    [ChitietHD].[Tongdongia] AS [Tongdongia]
+    FROM [dbo].[ChitietHD] AS [ChitietHD]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Chitietkho" EntityType="Self.Chitietkho" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Chitietkho].[IDkho] AS [IDkho], 
+    [Chitietkho].[IDsach] AS [IDsach], 
+    [Chitietkho].[Soluong] AS [Soluong]
+    FROM [dbo].[Chitietkho] AS [Chitietkho]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Chitietsach" EntityType="Self.Chitietsach" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Chitietsach].[IDsach] AS [IDsach], 
+    [Chitietsach].[IDloai] AS [IDloai]
+    FROM [dbo].[Chitietsach] AS [Chitietsach]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Danhgia" EntityType="Self.Danhgia" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Danhgia].[Ngayrv] AS [Ngayrv], 
+    [Danhgia].[IDuser] AS [IDuser], 
+    [Danhgia].[IDsach] AS [IDsach], 
+    [Danhgia].[Chitietrv] AS [Chitietrv]
+    FROM [dbo].[Danhgia] AS [Danhgia]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Giohang" EntityType="Self.Giohang" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Giohang].[IDuser] AS [IDuser], 
+    [Giohang].[IDsach] AS [IDsach], 
+    [Giohang].[Soluong] AS [Soluong]
+    FROM [dbo].[Giohang] AS [Giohang]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TiemsachcuaLuanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hoadon">
+          <Key>
+            <PropertyRef Name="IDhoadon" />
+          </Key>
+          <Property Name="IDhoadon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDuser" Type="Int32" Nullable="false" />
+          <Property Name="IDvoucher" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Ghichu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tongtien" Type="Double" Nullable="false" />
+          <Property Name="Thanhtien" Type="Double" Nullable="false" />
+          <Property Name="Ngaydat" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Ngaydukiengiao" Type="DateTime" Precision="0" />
+          <Property Name="Ngaygiao" Type="DateTime" Precision="0" />
+          <Property Name="IDtinhtrang" Type="Int32" Nullable="false" />
+          <Property Name="IDtaixe" Type="Int32" />
+          <Property Name="Diachi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TienShip" Type="Double" Nullable="false" />
+          <Property Name="IDthanhtoan" Type="Int32" />
+          <Property Name="Danhgia" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kho">
+          <Key>
+            <PropertyRef Name="IDkho" />
+          </Key>
+          <Property Name="IDkho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tenkho" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Diachikho" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+          <Property Name="Trungtam" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Loai">
+          <Key>
+            <PropertyRef Name="IDloai" />
+          </Key>
+          <Property Name="IDloai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tenloai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sach">
+          <Key>
+            <PropertyRef Name="IDsach" />
+          </Key>
+          <Property Name="IDsach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tensach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tacgia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gia" Type="Double" Nullable="false" />
+          <Property Name="Hinhanh" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+          <Property Name="LuotXem" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Thanhtoan">
+          <Key>
+            <PropertyRef Name="IDthanhtoan" />
+          </Key>
+          <Property Name="IDthanhtoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tenphuongthuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TinhtrangHD">
+          <Key>
+            <PropertyRef Name="IDtinhtrangHD" />
+          </Key>
+          <Property Name="IDtinhtrangHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TentinhtrangHD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IDuser" />
+          </Key>
+          <Property Name="IDuser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Tichluy" Type="Double" Nullable="false" />
+          <Property Name="Thanhvien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IDrole" Type="Int32" Nullable="false" />
+          <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+          <Property Name="TokenActive" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Voucher">
+          <Key>
+            <PropertyRef Name="IDvoucher" />
+          </Key>
+          <Property Name="IDvoucher" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tenvoucher" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Chietkhau" Type="Double" Nullable="false" />
+          <Property Name="Soluong" Type="Int32" Nullable="false" />
+          <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChitietHD">
+          <Key>
+            <PropertyRef Name="IDhoadon" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Soluong" />
+            <PropertyRef Name="Tongdongia" />
+          </Key>
+          <Property Name="IDhoadon" Type="Int32" Nullable="false" />
+          <Property Name="IDsach" Type="Int32" Nullable="false" />
+          <Property Name="Soluong" Type="Int32" Nullable="false" />
+          <Property Name="Tongdongia" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Chitietkho">
+          <Key>
+            <PropertyRef Name="IDkho" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Soluong" />
+          </Key>
+          <Property Name="IDkho" Type="Int32" Nullable="false" />
+          <Property Name="IDsach" Type="Int32" Nullable="false" />
+          <Property Name="Soluong" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Chitietsach">
+          <Key>
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="IDloai" />
+          </Key>
+          <Property Name="IDsach" Type="Int32" Nullable="false" />
+          <Property Name="IDloai" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Danhgia">
+          <Key>
+            <PropertyRef Name="IDuser" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Chitietrv" />
+          </Key>
+          <Property Name="Ngayrv" Type="DateTime" Precision="3" />
+          <Property Name="IDuser" Type="Int32" Nullable="false" />
+          <Property Name="IDsach" Type="Int32" Nullable="false" />
+          <Property Name="Chitietrv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Giohang">
+          <Key>
+            <PropertyRef Name="IDuser" />
+            <PropertyRef Name="IDsach" />
+            <PropertyRef Name="Soluong" />
+          </Key>
+          <Property Name="IDuser" Type="Int32" Nullable="false" />
+          <Property Name="IDsach" Type="Int32" Nullable="false" />
+          <Property Name="Soluong" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="TiemsachcuaLuanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hoadons" EntityType="Self.Hoadon" />
+          <EntitySet Name="Khoes" EntityType="Self.Kho" />
+          <EntitySet Name="Loais" EntityType="Self.Loai" />
+          <EntitySet Name="Saches" EntityType="Self.Sach" />
+          <EntitySet Name="Thanhtoans" EntityType="Self.Thanhtoan" />
+          <EntitySet Name="TinhtrangHDs" EntityType="Self.TinhtrangHD" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Vouchers" EntityType="Self.Voucher" />
+          <EntitySet Name="ChitietHDs" EntityType="Self.ChitietHD" />
+          <EntitySet Name="Chitietkhoes" EntityType="Self.Chitietkho" />
+          <EntitySet Name="Chitietsaches" EntityType="Self.Chitietsach" />
+          <EntitySet Name="Danhgias" EntityType="Self.Danhgia" />
+          <EntitySet Name="Giohangs" EntityType="Self.Giohang" />
+          <FunctionImport Name="sp_addchitietsach">
+            <Parameter Name="idsach" Mode="In" Type="Int32" />
+            <Parameter Name="idloai" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_addsach">
+            <Parameter Name="Tensach" Mode="In" Type="String" />
+            <Parameter Name="Tacgia" Mode="In" Type="String" />
+            <Parameter Name="Mota" Mode="In" Type="String" />
+            <Parameter Name="Gia" Mode="In" Type="Double" />
+            <Parameter Name="Hinhanh" Mode="In" Type="String" />
+            <Parameter Name="Soluong" Mode="In" Type="Int32" />
+            <Parameter Name="Trangthai" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_bomhang">
+            <Parameter Name="idshiper" Mode="In" Type="Int32" />
+            <Parameter Name="idbill" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_botragiohang">
+            <Parameter Name="iduser" Mode="In" Type="Int32" />
+            <Parameter Name="idsach" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_checkcode" ReturnType="Collection(Double)">
+            <Parameter Name="idvoucher" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_chuyenkho">
+            <Parameter Name="idkhodi" Mode="In" Type="Int32" />
+            <Parameter Name="idkhoden" Mode="In" Type="Int32" />
+            <Parameter Name="idsach" Mode="In" Type="Int32" />
+            <Parameter Name="soluong" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dangki">
+            <Parameter Name="Tk" Mode="In" Type="String" />
+            <Parameter Name="Mk" Mode="In" Type="String" />
+            <Parameter Name="Hoten" Mode="In" Type="String" />
+            <Parameter Name="Mail" Mode="In" Type="String" />
+            <Parameter Name="Sdt" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_danhanhang">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+            <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_danhgia">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+            <Parameter Name="IDsach" Mode="In" Type="Int32" />
+            <Parameter Name="Chitietrv" Mode="In" Type="String" />
+            <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_deletechitietsach">
+            <Parameter Name="idsach" Mode="In" Type="Int32" />
+            <Parameter Name="idloai" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_doipass">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+            <Parameter Name="oldpass" Mode="In" Type="String" />
+            <Parameter Name="newpass" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dongdanhgia">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+            <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_editprofile">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+            <Parameter Name="Hoten" Mode="In" Type="String" />
+            <Parameter Name="Mail" Mode="In" Type="String" />
+            <Parameter Name="Sdt" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_editsach">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="ten" Mode="In" Type="String" />
+            <Parameter Name="tgia" Mode="In" Type="String" />
+            <Parameter Name="mota" Mode="In" Type="String" />
+            <Parameter Name="gia" Mode="In" Type="Double" />
+            <Parameter Name="img" Mode="In" Type="String" />
+            <Parameter Name="trangthai" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="sp_hoanthanhgiao">
+            <Parameter Name="idshiper" Mode="In" Type="Int32" />
+            <Parameter Name="idbill" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadbilldbyiduser" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadbilldbyiduser_Result)">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadchitiethoadon" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadchitiethoadon_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadchitietkhobyid" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadchitietkhobyid_Result)">
+            <Parameter Name="idkho" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadchitietsach" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadchitietsach_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadDanhgiabyIDsach" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadDanhgiabyIDsach_Result)">
+            <Parameter Name="IDsach" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadgiohang" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadgiohang_Result)">
+            <Parameter Name="iduser" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadhdxacnhan" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadhdxacnhan_Result)" />
+          <FunctionImport Name="sp_loadhoadon" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadhoadon_Result)" />
+          <FunctionImport Name="sp_loadhoadonchuaxuly" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadhoadonchuaxuly_Result)" />
+          <FunctionImport Name="sp_loadIDsach" ReturnType="Collection(Int32)">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+            <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadinfobilldbyiduser" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadinfobilldbyiduser_Result)">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+            <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadlistkho" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlistkho_Result)" />
+          <FunctionImport Name="sp_loadlistkhohoatdong" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlistkhohoatdong_Result)">
+            <Parameter Name="idkho" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadloaisach" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadloaisach_Result)" />
+          <FunctionImport Name="sp_loadlstdondagiao" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlstdondagiao_Result)">
+            <Parameter Name="idshiper" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadlstdondahuy" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlstdondahuy_Result)">
+            <Parameter Name="idshiper" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadlstdondanhan" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlstdondanhan_Result)">
+            <Parameter Name="idshiper" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadsachbyID" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadsachbyID_Result)">
+            <Parameter Name="IDsach" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadshipperfull" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadshipperfull_Result)" />
+          <FunctionImport Name="sp_loadshipperhoatdong" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadshipperhoatdong_Result)" />
+          <FunctionImport Name="sp_loadsphoatdong" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadsphoatdong_Result)" />
+          <FunctionImport Name="sp_loadtheloaibyIDsach" ReturnType="Collection(String)">
+            <Parameter Name="IDsach" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_loadvoucherhoatdong" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadvoucherhoatdong_Result)" />
+          <FunctionImport Name="sp_login" ReturnType="Collection(TiemsachcuaLuanModel.sp_login_Result)">
+            <Parameter Name="Tk" Mode="In" Type="String" />
+            <Parameter Name="Mk" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_phanviec">
+            <Parameter Name="iduser" Mode="In" Type="Int32" />
+            <Parameter Name="idbill" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_soluongtronggio" ReturnType="Collection(Int32)">
+            <Parameter Name="iduser" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_thanhtoan">
+            <Parameter Name="iduser" Mode="In" Type="Int32" />
+            <Parameter Name="idthanhtoan" Mode="In" Type="Int32" />
+            <Parameter Name="diachi" Mode="In" Type="String" />
+            <Parameter Name="ghichu" Mode="In" Type="String" />
+            <Parameter Name="idvoucher" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_themvaogiohang">
+            <Parameter Name="iduser" Mode="In" Type="Int32" />
+            <Parameter Name="idsach" Mode="In" Type="Int32" />
+            <Parameter Name="soluong" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_updategiohang">
+            <Parameter Name="iduser" Mode="In" Type="Int32" />
+            <Parameter Name="idsach" Mode="In" Type="Int32" />
+            <Parameter Name="soluong" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_UpdateHD">
+            <Parameter Name="idhd" Mode="In" Type="Int32" />
+            <Parameter Name="idtinhtrang" Mode="In" Type="Int32" />
+            <Parameter Name="ngaydukien" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_xacnhandon">
+            <Parameter Name="idhd" Mode="In" Type="Int32" />
+            <Parameter Name="ngaydukien" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_xacnhandonauto">
+            <Parameter Name="idhd" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_yeucauhoanhang">
+            <Parameter Name="IDuser" Mode="In" Type="Int32" />
+            <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_loadbilldbyiduser_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="Int32" Name="IDuser" Nullable="false" />
+          <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="Double" Name="Tongtien" Nullable="false" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+          <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+          <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+          <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="TienShip" Nullable="false" />
+          <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+          <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+          <Property Type="Double" Name="Chietkhau" Nullable="false" />
+          <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Tentaixe" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Tenkh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sdtkh" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="Soluong" Nullable="false" />
+          <Property Type="Double" Name="Tongdongia" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadchitiethoadon_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="Int32" Name="IDuser" Nullable="false" />
+          <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="Double" Name="Tongtien" Nullable="false" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+          <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+          <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+          <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="TienShip" Nullable="false" />
+          <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+          <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+          <Property Type="Int32" Name="Soluong" Nullable="false" />
+          <Property Type="Double" Name="Tongdongia" Nullable="false" />
+          <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="IDsach" Nullable="false" />
+          <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_loadchitietkhobyid_Result">
+          <Property Type="String" Name="Tenkho" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="IDkho" Nullable="false" />
+          <Property Type="Int32" Name="IDsach" Nullable="false" />
+          <Property Type="Int32" Name="Soluong" Nullable="false" />
+          <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+        </ComplexType>
+        <ComplexType Name="sp_loadchitietsach_Result">
+          <Property Type="Int32" Name="IDsach" Nullable="false" />
+          <Property Type="Int32" Name="IDloai" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadDanhgiabyIDsach_Result">
+          <Property Type="DateTime" Name="Ngayrv" Nullable="true" Precision="23" />
+          <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Chitietrv" Nullable="false" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="sp_loadgiohang_Result">
+          <Property Type="Int32" Name="IDsach" Nullable="false" />
+          <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Tacgia" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="Soluong" Nullable="false" />
+          <Property Type="Double" Name="Gia" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadhdxacnhan_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_loadhoadon_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="Int32" Name="IDuser" Nullable="false" />
+          <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="Double" Name="Tongtien" Nullable="false" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+          <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+          <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+          <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="TienShip" Nullable="false" />
+          <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+          <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+          <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_loadhoadonchuaxuly_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="Int32" Name="IDuser" Nullable="false" />
+          <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="Double" Name="Tongtien" Nullable="false" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+          <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+          <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+          <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="TienShip" Nullable="false" />
+          <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+          <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+          <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_loadinfobilldbyiduser_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="Int32" Name="IDuser" Nullable="false" />
+          <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="Double" Name="Tongtien" Nullable="false" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+          <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+          <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+          <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="TienShip" Nullable="false" />
+          <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+          <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+          <Property Type="Double" Name="Chietkhau" Nullable="false" />
+          <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Tentaixe" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Tenkh" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sdtkh" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="Soluong" Nullable="false" />
+          <Property Type="Double" Name="Tongdongia" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadlistkho_Result">
+          <Property Type="Int32" Name="IDkho" Nullable="false" />
+          <Property Type="String" Name="Tenkho" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Diachikho" Nullable="false" MaxLength="200" />
+          <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+          <Property Type="Boolean" Name="Trungtam" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadlistkhohoatdong_Result">
+          <Property Type="Int32" Name="IDkho" Nullable="false" />
+          <Property Type="String" Name="Tenkho" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Diachikho" Nullable="false" MaxLength="200" />
+          <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+          <Property Type="Boolean" Name="Trungtam" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadloaisach_Result">
+          <Property Type="Int32" Name="IDloai" Nullable="false" />
+          <Property Type="String" Name="Tenloai" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_loadlstdondagiao_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+          <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_loadlstdondahuy_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_loadlstdondanhan_Result">
+          <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+          <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="Thanhtien" Nullable="false" />
+          <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_loadsachbyID_Result">
+          <Property Type="Int32" Name="IDsach" Nullable="false" />
+          <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Tacgia" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Mota" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="Gia" Nullable="false" />
+          <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="SoLuong" Nullable="false" />
+          <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+          <Property Type="Int32" Name="LuotXem" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadshipperfull_Result">
+          <Property Type="Int32" Name="IDuser" Nullable="false" />
+          <Property Type="String" Name="Tk" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Mail" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="IDrole" Nullable="false" />
+          <Property Type="Boolean" Name="TrangThai" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadshipperhoatdong_Result">
+          <Property Type="Int32" Name="IDuser" Nullable="false" />
+          <Property Type="String" Name="Tk" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Mail" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+          <Property Type="Int32" Name="IDrole" Nullable="false" />
+          <Property Type="Boolean" Name="TrangThai" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadsphoatdong_Result">
+          <Property Type="Int32" Name="IDsach" Nullable="false" />
+          <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Tacgia" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Mota" Nullable="false" MaxLength="Max" />
+          <Property Type="Double" Name="Gia" Nullable="false" />
+          <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="SoLuong" Nullable="false" />
+          <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+          <Property Type="Int32" Name="LuotXem" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_loadvoucherhoatdong_Result">
+          <Property Type="String" Name="IDvoucher" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Tenvoucher" Nullable="false" MaxLength="100" />
+          <Property Type="Double" Name="Chietkhau" Nullable="false" />
+          <Property Type="Int32" Name="Soluong" Nullable="false" />
+          <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_login_Result">
+          <Property Type="Int32" Name="IDuser" Nullable="false" />
+          <Property Type="String" Name="Tk" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Mk" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Mail" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+          <Property Type="Double" Name="Tichluy" Nullable="false" />
+          <Property Type="String" Name="Thanhvien" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="IDrole" Nullable="false" />
+          <Property Type="Boolean" Name="TrangThai" Nullable="false" />
+          <Property Type="String" Name="TokenActive" Nullable="false" MaxLength="10" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TiemsachcuaLuanModelStoreContainer" CdmEntityContainer="TiemsachcuaLuanEntities">
+          <EntitySetMapping Name="Hoadons">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Hoadon">
+              <MappingFragment StoreEntitySet="Hoadon">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="IDvoucher" ColumnName="IDvoucher" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+                <ScalarProperty Name="Ngaygiao" ColumnName="Ngaygiao" />
+                <ScalarProperty Name="IDtinhtrang" ColumnName="IDtinhtrang" />
+                <ScalarProperty Name="IDtaixe" ColumnName="IDtaixe" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="TienShip" ColumnName="TienShip" />
+                <ScalarProperty Name="IDthanhtoan" ColumnName="IDthanhtoan" />
+                <ScalarProperty Name="Danhgia" ColumnName="Danhgia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Khoes">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Kho">
+              <MappingFragment StoreEntitySet="Kho">
+                <ScalarProperty Name="IDkho" ColumnName="IDkho" />
+                <ScalarProperty Name="Tenkho" ColumnName="Tenkho" />
+                <ScalarProperty Name="Diachikho" ColumnName="Diachikho" />
+                <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+                <ScalarProperty Name="Trungtam" ColumnName="Trungtam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Loais">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Loai">
+              <MappingFragment StoreEntitySet="Loai">
+                <ScalarProperty Name="IDloai" ColumnName="IDloai" />
+                <ScalarProperty Name="Tenloai" ColumnName="Tenloai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Saches">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Sach">
+              <MappingFragment StoreEntitySet="Sach">
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Tacgia" ColumnName="Tacgia" />
+                <ScalarProperty Name="Mota" ColumnName="Mota" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+                <ScalarProperty Name="LuotXem" ColumnName="LuotXem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Thanhtoans">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Thanhtoan">
+              <MappingFragment StoreEntitySet="Thanhtoan">
+                <ScalarProperty Name="IDthanhtoan" ColumnName="IDthanhtoan" />
+                <ScalarProperty Name="Tenphuongthuc" ColumnName="Tenphuongthuc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinhtrangHDs">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.TinhtrangHD">
+              <MappingFragment StoreEntitySet="TinhtrangHD">
+                <ScalarProperty Name="IDtinhtrangHD" ColumnName="IDtinhtrangHD" />
+                <ScalarProperty Name="TentinhtrangHD" ColumnName="TentinhtrangHD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="Tk" ColumnName="Tk" />
+                <ScalarProperty Name="Mk" ColumnName="Mk" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Tichluy" ColumnName="Tichluy" />
+                <ScalarProperty Name="Thanhvien" ColumnName="Thanhvien" />
+                <ScalarProperty Name="IDrole" ColumnName="IDrole" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="TokenActive" ColumnName="TokenActive" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vouchers">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Voucher">
+              <MappingFragment StoreEntitySet="Voucher">
+                <ScalarProperty Name="IDvoucher" ColumnName="IDvoucher" />
+                <ScalarProperty Name="Tenvoucher" ColumnName="Tenvoucher" />
+                <ScalarProperty Name="Chietkhau" ColumnName="Chietkhau" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChitietHDs">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.ChitietHD">
+              <MappingFragment StoreEntitySet="ChitietHD">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Tongdongia" ColumnName="Tongdongia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Chitietkhoes">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Chitietkho">
+              <MappingFragment StoreEntitySet="Chitietkho">
+                <ScalarProperty Name="IDkho" ColumnName="IDkho" />
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Chitietsaches">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Chitietsach">
+              <MappingFragment StoreEntitySet="Chitietsach">
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="IDloai" ColumnName="IDloai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Danhgias">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Danhgia">
+              <MappingFragment StoreEntitySet="Danhgia">
+                <ScalarProperty Name="Ngayrv" ColumnName="Ngayrv" />
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Chitietrv" ColumnName="Chitietrv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Giohangs">
+            <EntityTypeMapping TypeName="TiemsachcuaLuanModel.Giohang">
+              <MappingFragment StoreEntitySet="Giohang">
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_addchitietsach" FunctionName="TiemsachcuaLuanModel.Store.sp_addchitietsach" />
+          <FunctionImportMapping FunctionImportName="sp_addsach" FunctionName="TiemsachcuaLuanModel.Store.sp_addsach" />
+          <FunctionImportMapping FunctionImportName="sp_bomhang" FunctionName="TiemsachcuaLuanModel.Store.sp_bomhang" />
+          <FunctionImportMapping FunctionImportName="sp_botragiohang" FunctionName="TiemsachcuaLuanModel.Store.sp_botragiohang" />
+          <FunctionImportMapping FunctionImportName="sp_checkcode" FunctionName="TiemsachcuaLuanModel.Store.sp_checkcode" />
+          <FunctionImportMapping FunctionImportName="sp_chuyenkho" FunctionName="TiemsachcuaLuanModel.Store.sp_chuyenkho" />
+          <FunctionImportMapping FunctionImportName="sp_dangki" FunctionName="TiemsachcuaLuanModel.Store.sp_dangki" />
+          <FunctionImportMapping FunctionImportName="sp_danhanhang" FunctionName="TiemsachcuaLuanModel.Store.sp_danhanhang" />
+          <FunctionImportMapping FunctionImportName="sp_danhgia" FunctionName="TiemsachcuaLuanModel.Store.sp_danhgia" />
+          <FunctionImportMapping FunctionImportName="sp_deletechitietsach" FunctionName="TiemsachcuaLuanModel.Store.sp_deletechitietsach" />
+          <FunctionImportMapping FunctionImportName="sp_doipass" FunctionName="TiemsachcuaLuanModel.Store.sp_doipass" />
+          <FunctionImportMapping FunctionImportName="sp_dongdanhgia" FunctionName="TiemsachcuaLuanModel.Store.sp_dongdanhgia" />
+          <FunctionImportMapping FunctionImportName="sp_editprofile" FunctionName="TiemsachcuaLuanModel.Store.sp_editprofile" />
+          <FunctionImportMapping FunctionImportName="sp_editsach" FunctionName="TiemsachcuaLuanModel.Store.sp_editsach" />
+          <FunctionImportMapping FunctionImportName="sp_hoanthanhgiao" FunctionName="TiemsachcuaLuanModel.Store.sp_hoanthanhgiao" />
+          <FunctionImportMapping FunctionImportName="sp_loadbilldbyiduser" FunctionName="TiemsachcuaLuanModel.Store.sp_loadbilldbyiduser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadbilldbyiduser_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="IDvoucher" ColumnName="IDvoucher" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+                <ScalarProperty Name="Ngaygiao" ColumnName="Ngaygiao" />
+                <ScalarProperty Name="IDtinhtrang" ColumnName="IDtinhtrang" />
+                <ScalarProperty Name="IDtaixe" ColumnName="IDtaixe" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="TienShip" ColumnName="TienShip" />
+                <ScalarProperty Name="IDthanhtoan" ColumnName="IDthanhtoan" />
+                <ScalarProperty Name="Danhgia" ColumnName="Danhgia" />
+                <ScalarProperty Name="Chietkhau" ColumnName="Chietkhau" />
+                <ScalarProperty Name="Tenphuongthuc" ColumnName="Tenphuongthuc" />
+                <ScalarProperty Name="TentinhtrangHD" ColumnName="TentinhtrangHD" />
+                <ScalarProperty Name="Tentaixe" ColumnName="Tentaixe" />
+                <ScalarProperty Name="Tenkh" ColumnName="Tenkh" />
+                <ScalarProperty Name="Sdtkh" ColumnName="Sdtkh" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Tongdongia" ColumnName="Tongdongia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadchitiethoadon" FunctionName="TiemsachcuaLuanModel.Store.sp_loadchitiethoadon">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadchitiethoadon_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="IDvoucher" ColumnName="IDvoucher" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+                <ScalarProperty Name="Ngaygiao" ColumnName="Ngaygiao" />
+                <ScalarProperty Name="IDtinhtrang" ColumnName="IDtinhtrang" />
+                <ScalarProperty Name="IDtaixe" ColumnName="IDtaixe" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="TienShip" ColumnName="TienShip" />
+                <ScalarProperty Name="IDthanhtoan" ColumnName="IDthanhtoan" />
+                <ScalarProperty Name="Danhgia" ColumnName="Danhgia" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Tongdongia" ColumnName="Tongdongia" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="TentinhtrangHD" ColumnName="TentinhtrangHD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadchitietkhobyid" FunctionName="TiemsachcuaLuanModel.Store.sp_loadchitietkhobyid">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadchitietkhobyid_Result">
+                <ScalarProperty Name="Tenkho" ColumnName="Tenkho" />
+                <ScalarProperty Name="IDkho" ColumnName="IDkho" />
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadchitietsach" FunctionName="TiemsachcuaLuanModel.Store.sp_loadchitietsach">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadchitietsach_Result">
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="IDloai" ColumnName="IDloai" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadDanhgiabyIDsach" FunctionName="TiemsachcuaLuanModel.Store.sp_loadDanhgiabyIDsach">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadDanhgiabyIDsach_Result">
+                <ScalarProperty Name="Ngayrv" ColumnName="Ngayrv" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Chitietrv" ColumnName="Chitietrv" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadgiohang" FunctionName="TiemsachcuaLuanModel.Store.sp_loadgiohang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadgiohang_Result">
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Tacgia" ColumnName="Tacgia" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadhdxacnhan" FunctionName="TiemsachcuaLuanModel.Store.sp_loadhdxacnhan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadhdxacnhan_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Tenphuongthuc" ColumnName="Tenphuongthuc" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadhoadon" FunctionName="TiemsachcuaLuanModel.Store.sp_loadhoadon">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadhoadon_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="IDvoucher" ColumnName="IDvoucher" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+                <ScalarProperty Name="Ngaygiao" ColumnName="Ngaygiao" />
+                <ScalarProperty Name="IDtinhtrang" ColumnName="IDtinhtrang" />
+                <ScalarProperty Name="IDtaixe" ColumnName="IDtaixe" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="TienShip" ColumnName="TienShip" />
+                <ScalarProperty Name="IDthanhtoan" ColumnName="IDthanhtoan" />
+                <ScalarProperty Name="Danhgia" ColumnName="Danhgia" />
+                <ScalarProperty Name="TentinhtrangHD" ColumnName="TentinhtrangHD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadhoadonchuaxuly" FunctionName="TiemsachcuaLuanModel.Store.sp_loadhoadonchuaxuly">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadhoadonchuaxuly_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="IDvoucher" ColumnName="IDvoucher" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+                <ScalarProperty Name="Ngaygiao" ColumnName="Ngaygiao" />
+                <ScalarProperty Name="IDtinhtrang" ColumnName="IDtinhtrang" />
+                <ScalarProperty Name="IDtaixe" ColumnName="IDtaixe" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="TienShip" ColumnName="TienShip" />
+                <ScalarProperty Name="IDthanhtoan" ColumnName="IDthanhtoan" />
+                <ScalarProperty Name="Danhgia" ColumnName="Danhgia" />
+                <ScalarProperty Name="TentinhtrangHD" ColumnName="TentinhtrangHD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadIDsach" FunctionName="TiemsachcuaLuanModel.Store.sp_loadIDsach" />
+          <FunctionImportMapping FunctionImportName="sp_loadinfobilldbyiduser" FunctionName="TiemsachcuaLuanModel.Store.sp_loadinfobilldbyiduser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadinfobilldbyiduser_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="IDvoucher" ColumnName="IDvoucher" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Tongtien" ColumnName="Tongtien" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Ngaydat" ColumnName="Ngaydat" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+                <ScalarProperty Name="Ngaygiao" ColumnName="Ngaygiao" />
+                <ScalarProperty Name="IDtinhtrang" ColumnName="IDtinhtrang" />
+                <ScalarProperty Name="IDtaixe" ColumnName="IDtaixe" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="TienShip" ColumnName="TienShip" />
+                <ScalarProperty Name="IDthanhtoan" ColumnName="IDthanhtoan" />
+                <ScalarProperty Name="Danhgia" ColumnName="Danhgia" />
+                <ScalarProperty Name="Chietkhau" ColumnName="Chietkhau" />
+                <ScalarProperty Name="Tenphuongthuc" ColumnName="Tenphuongthuc" />
+                <ScalarProperty Name="TentinhtrangHD" ColumnName="TentinhtrangHD" />
+                <ScalarProperty Name="Tentaixe" ColumnName="Tentaixe" />
+                <ScalarProperty Name="Tenkh" ColumnName="Tenkh" />
+                <ScalarProperty Name="Sdtkh" ColumnName="Sdtkh" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Tongdongia" ColumnName="Tongdongia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadlistkho" FunctionName="TiemsachcuaLuanModel.Store.sp_loadlistkho">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadlistkho_Result">
+                <ScalarProperty Name="IDkho" ColumnName="IDkho" />
+                <ScalarProperty Name="Tenkho" ColumnName="Tenkho" />
+                <ScalarProperty Name="Diachikho" ColumnName="Diachikho" />
+                <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+                <ScalarProperty Name="Trungtam" ColumnName="Trungtam" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadlistkhohoatdong" FunctionName="TiemsachcuaLuanModel.Store.sp_loadlistkhohoatdong">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadlistkhohoatdong_Result">
+                <ScalarProperty Name="IDkho" ColumnName="IDkho" />
+                <ScalarProperty Name="Tenkho" ColumnName="Tenkho" />
+                <ScalarProperty Name="Diachikho" ColumnName="Diachikho" />
+                <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+                <ScalarProperty Name="Trungtam" ColumnName="Trungtam" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadloaisach" FunctionName="TiemsachcuaLuanModel.Store.sp_loadloaisach">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadloaisach_Result">
+                <ScalarProperty Name="IDloai" ColumnName="IDloai" />
+                <ScalarProperty Name="Tenloai" ColumnName="Tenloai" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadlstdondagiao" FunctionName="TiemsachcuaLuanModel.Store.sp_loadlstdondagiao">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadlstdondagiao_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Tenphuongthuc" ColumnName="Tenphuongthuc" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+                <ScalarProperty Name="Ngaygiao" ColumnName="Ngaygiao" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadlstdondahuy" FunctionName="TiemsachcuaLuanModel.Store.sp_loadlstdondahuy">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadlstdondahuy_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Tenphuongthuc" ColumnName="Tenphuongthuc" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadlstdondanhan" FunctionName="TiemsachcuaLuanModel.Store.sp_loadlstdondanhan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadlstdondanhan_Result">
+                <ScalarProperty Name="IDhoadon" ColumnName="IDhoadon" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Ghichu" ColumnName="Ghichu" />
+                <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+                <ScalarProperty Name="Thanhtien" ColumnName="Thanhtien" />
+                <ScalarProperty Name="Tenphuongthuc" ColumnName="Tenphuongthuc" />
+                <ScalarProperty Name="Ngaydukiengiao" ColumnName="Ngaydukiengiao" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadsachbyID" FunctionName="TiemsachcuaLuanModel.Store.sp_loadsachbyID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadsachbyID_Result">
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Tacgia" ColumnName="Tacgia" />
+                <ScalarProperty Name="Mota" ColumnName="Mota" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+                <ScalarProperty Name="LuotXem" ColumnName="LuotXem" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadshipperfull" FunctionName="TiemsachcuaLuanModel.Store.sp_loadshipperfull">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadshipperfull_Result">
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="Tk" ColumnName="Tk" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="IDrole" ColumnName="IDrole" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadshipperhoatdong" FunctionName="TiemsachcuaLuanModel.Store.sp_loadshipperhoatdong">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadshipperhoatdong_Result">
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="Tk" ColumnName="Tk" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="IDrole" ColumnName="IDrole" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadsphoatdong" FunctionName="TiemsachcuaLuanModel.Store.sp_loadsphoatdong">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadsphoatdong_Result">
+                <ScalarProperty Name="IDsach" ColumnName="IDsach" />
+                <ScalarProperty Name="Tensach" ColumnName="Tensach" />
+                <ScalarProperty Name="Tacgia" ColumnName="Tacgia" />
+                <ScalarProperty Name="Mota" ColumnName="Mota" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+                <ScalarProperty Name="LuotXem" ColumnName="LuotXem" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_loadtheloaibyIDsach" FunctionName="TiemsachcuaLuanModel.Store.sp_loadtheloaibyIDsach" />
+          <FunctionImportMapping FunctionImportName="sp_loadvoucherhoatdong" FunctionName="TiemsachcuaLuanModel.Store.sp_loadvoucherhoatdong">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_loadvoucherhoatdong_Result">
+                <ScalarProperty Name="IDvoucher" ColumnName="IDvoucher" />
+                <ScalarProperty Name="Tenvoucher" ColumnName="Tenvoucher" />
+                <ScalarProperty Name="Chietkhau" ColumnName="Chietkhau" />
+                <ScalarProperty Name="Soluong" ColumnName="Soluong" />
+                <ScalarProperty Name="Trangthai" ColumnName="Trangthai" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_login" FunctionName="TiemsachcuaLuanModel.Store.sp_login">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TiemsachcuaLuanModel.sp_login_Result">
+                <ScalarProperty Name="IDuser" ColumnName="IDuser" />
+                <ScalarProperty Name="Tk" ColumnName="Tk" />
+                <ScalarProperty Name="Mk" ColumnName="Mk" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Tichluy" ColumnName="Tichluy" />
+                <ScalarProperty Name="Thanhvien" ColumnName="Thanhvien" />
+                <ScalarProperty Name="IDrole" ColumnName="IDrole" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="TokenActive" ColumnName="TokenActive" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_phanviec" FunctionName="TiemsachcuaLuanModel.Store.sp_phanviec" />
+          <FunctionImportMapping FunctionImportName="sp_soluongtronggio" FunctionName="TiemsachcuaLuanModel.Store.sp_soluongtronggio" />
+          <FunctionImportMapping FunctionImportName="sp_thanhtoan" FunctionName="TiemsachcuaLuanModel.Store.sp_thanhtoan" />
+          <FunctionImportMapping FunctionImportName="sp_themvaogiohang" FunctionName="TiemsachcuaLuanModel.Store.sp_themvaogiohang" />
+          <FunctionImportMapping FunctionImportName="sp_updategiohang" FunctionName="TiemsachcuaLuanModel.Store.sp_updategiohang" />
+          <FunctionImportMapping FunctionImportName="sp_UpdateHD" FunctionName="TiemsachcuaLuanModel.Store.sp_UpdateHD" />
+          <FunctionImportMapping FunctionImportName="sp_xacnhandon" FunctionName="TiemsachcuaLuanModel.Store.sp_xacnhandon" />
+          <FunctionImportMapping FunctionImportName="sp_xacnhandonauto" FunctionName="TiemsachcuaLuanModel.Store.sp_xacnhandonauto" />
+          <FunctionImportMapping FunctionImportName="sp_yeucauhoanhang" FunctionName="TiemsachcuaLuanModel.Store.sp_yeucauhoanhang" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

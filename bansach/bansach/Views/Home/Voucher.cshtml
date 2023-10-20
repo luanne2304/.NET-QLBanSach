@@ -1,0 +1,63 @@
+﻿@model List<bansach.Models.Voucher>
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<div class="container px-4 px-lg-5 mt-3">
+    <div class="container h-100 pt-1 pb-5">
+        <table class="table">
+            <tr>
+                <th>
+                    Mã voucher
+                </th>
+                <th>
+                    Tên voucher
+                </th>
+                <th>
+                    % giảm
+                </th>
+                <th>
+                    Số lượng
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="idvoucher">
+                        @Html.DisplayFor(modelItem => item.IDvoucher)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tenvoucher)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Chietkhau)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Soluong)
+                    </td>
+                    <td>
+                        <a href="#" onclick="copyCode(event)">Copy code</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        function copyCode(event) {
+            event.preventDefault();
+            const codeToCopy = event.target.closest('tr').querySelector('.idvoucher').innerText;
+            navigator.clipboard.writeText(codeToCopy)
+                .then(() => {
+                    console.log('Code copied to clipboard');
+                    swal('Success', 'Code copied to clipboard', 'success');
+                })
+                .catch((err) => {
+                    console.error('Failed to copy code: ', err);
+                });
+        }
+    </script>
+}

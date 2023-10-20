@@ -1,0 +1,136 @@
+﻿@using bansach.DTO
+@using PagedList.Mvc
+@model PagedList.PagedList<HoadonPhanviecDTO>
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <table class="table">
+            <tr>
+                <th></th>
+                <th>
+                    ID hóa đơn
+                </th>
+                <th>
+                    Ghi chú
+                </th>
+                <th>
+                    Địa chỉ
+                </th>
+                <th>
+                    Thành tiền
+                </th>
+                <th>
+                    Tên phương thức
+                </th>
+                <th>
+                    Ngày dự kiến giao
+                </th>
+                <th colspan="3" rowspan="2">
+                    <button type="button" class="btn btn-success" id="phanviec-btn">Phân việc</button>
+                </th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th colspan="3">@Html.DropDownList("shipper", null, htmlAttributes: new { @id = "shipper" })</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><input type="checkbox" value="" id="@item.IDhoadon"></td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDhoadon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ghichu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Diachi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Thanhtien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tenphuongthuc)
+                    </td>
+                    <td>
+                        @item.Ngaydukiengiao.ToShortDateString()
+                    </td>
+                    <td>
+                        <a href="/Admin/AdminHoadon/Edit/@item.IDhoadon"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
+                    </td>
+                </tr>
+            }
+        </table>
+        <div>
+            <div class="MenuTrang">
+                @Html.PagedListPager(Model, page => Url.Action("Phancong", new { page = page }))
+
+            </div>
+        </div>
+        </div>
+    </div>
+        @section scripts{
+            <script>
+                $(function () {
+                    $('#phanviec-btn').click(function () {
+                        // Lặp qua tất cả các checkbox và lấy giá trị id của các checkbox được chọn
+                        var selectedIds = [];
+                        $('input[type="checkbox"]:checked').each(function () {
+                            selectedIds.push($(this).attr('id'));
+                        });
+                        var model = {};
+                        model.selectedIds = selectedIds;
+                        model.idshipper = document.getElementById('shipper').value;
+
+                        // Gửi giá trị id được chọn bằng ajax
+                        $.ajax({
+                            type: "POST",
+                            url: "/AdminHoadon/Phancong",
+                            data: JSON.stringify(model),
+                            dataType: "json",
+                            contentType: "application/json; charset=utf-8",
+                            data: JSON.stringify(model),
+                            success: function (data) {
+                                if (data.check == 1) {
+                                    swal({
+                                        title: 'Thành công',
+                                        text: 'Dữ liệu đã được lưu thành công',
+                                        icon: 'success',
+                                        button: 'OK'
+                                    }).then(() => {
+                                        location.reload(true); // Refresh lại trang
+                                    });
+                                }
+                                else {
+                                    swal({
+                                        title: "Lỗi!",
+                                        text: "Thao tác của bạn không thành công!",
+                                        icon: "error",
+                                        confirmButtonText: "OK"
+                                    });
+                                }
+
+                            },
+                            error: function () {
+                                alert('Có lỗi xảy ra.');
+                            }
+                        });
+                    });
+                });
+            </script>
+        }

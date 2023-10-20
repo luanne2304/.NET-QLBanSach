@@ -1,0 +1,54 @@
+﻿@model IEnumerable<bansach.Models.Kho>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <p class="ml-2 mt-2">
+            <a href="/Admin/AdminKho/Create">
+                <button type="button" class="btn btn-success">Thêm Kho</button>
+            </a>
+        </p>
+        <table class="table">
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Tenkho)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Diachikho)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Trangthai)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Trungtam)
+                </th>
+                <th scope="col"></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td scope="col">
+                        @Html.DisplayFor(modelItem => item.Tenkho)
+                    </td>
+                    <td scope="col">
+                        @Html.DisplayFor(modelItem => item.Diachikho)
+                    </td>
+                    <td scope="col">
+                        @Html.DisplayFor(modelItem => item.Trangthai)
+                    </td>
+                    <td scope="col">
+                        @Html.DisplayFor(modelItem => item.Trungtam)
+                    </td>
+                    <td scope="col">
+                        <a href="/Admin/AdminKho/Edit/@item.IDkho"><i class="fa-solid fa-pen-to-square fa-lg"></i></a> | 
+                        <a href="/Admin/AdminKho/Details/@item.IDkho"><i class="fa-solid fa-eye fa-lg"></i></a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

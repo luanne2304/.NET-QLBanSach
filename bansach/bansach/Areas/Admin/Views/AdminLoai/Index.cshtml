@@ -1,0 +1,38 @@
+﻿@model IEnumerable<bansach.Models.Loai>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <p class="ml-2 mt-2">
+            <a href="/Admin/AdminLoai/Create">
+                <button type="button" class="btn btn-success">Thêm Voucher</button>
+            </a>
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tenloai)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tenloai)
+                    </td>
+                    <td>
+                        <a href="/Admin/AdminLoai/Edit/@item.IDloai"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

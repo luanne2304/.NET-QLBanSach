@@ -1,0 +1,14 @@
+﻿<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <div class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="find-sach">
+            <button class="btn btn-outline-success" onclick="searchProduct()">Search</button>
+        </div>
+    </div>
+</nav>
+<ul class="list-group">
+    @foreach (var item in ViewBag.loai as List<bansach.Models.Loai>)
+    {
+        <li class="list-group-item"> <a href="/Home/ListProduct?cate=@item.IDloai" class="nav-link text-secondary fw-bold">@item.Tenloai</a></li>
+    }
+</ul>

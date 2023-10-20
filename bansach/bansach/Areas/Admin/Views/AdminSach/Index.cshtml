@@ -1,0 +1,163 @@
+﻿@using bansach.Models
+@using PagedList.Mvc
+@model PagedList.PagedList<Sach>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <p class="ml-2 mt-2">
+            <a href="/Admin/AdminSach/Create">
+                <button type="button" class="btn btn-success">Thêm sách</button>
+            </a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID sách</th>
+                    <th scope="col">Tên sách</th>
+                    <th scope="col">Tác giả</th>
+                    <th scope="col">Giá</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Trạng thái</th>
+                    <th scope="col"></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IDsach)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tensach)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tacgia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gia)
+                        </td>
+                        <td>
+                            <img style="width:100px; height:140px" src="~/Content/AnhSP/@item.Hinhanh" alt="" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoLuong)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Trangthai)
+                        </td>
+                        <td>
+                            <a style="text-decoration: none;" href="/Admin/AdminSach/Edit/@item.IDsach"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
+                            <button onclick="show_md_nhaphang(this.id)" type="button" class="btn btn-info" id="@(item.IDsach)">Nhập hàng</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div>
+        <div class="MenuTrang">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+        </div>
+    </div>
+        <div id="myModal" class="hidenmodal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nhập hàng</h5>
+                    <span onclick="closemd()" class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <img id="md_hinhanh" style="width:100px; height:150px" src="" alt="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="md_idsachtemp">ID sản phẩm:</label>
+                        <input disabled class="form-control" id="md_idsachtemp" name="md_idsachtemp" type="text">
+                        <input hidden class="form-control" id="md_idsach" name="md_idsach" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="md_tensach">Tên sản phẩm:</label>
+                        <input disabled class="form-control" id="md_tensach" name="md_tensach" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="md_soluong">Số lượng nhập : </label>
+                        <input class="form-control" type="number" id="md_soluong" name="md_soluong" placeholder="Nhập số lượng">
+                    </div>
+                    <div class="form-group">
+                        <label for="md_khoden">Chọn kho: </label>
+                        @Html.DropDownList("kho", null, htmlAttributes: new { @class = "form-control" })
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="closemd()" type="button" class="btn btn-secondary close-footer">
+                            Đóng
+                        </button>
+                        <button name="submit" type="submit" class="btn btn-primary order" onclick="nhaphang()" value="submit">
+                            Nhập
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        function show_md_nhaphang(id) {
+            modal.style.display = "block";
+            document.getElementById('md_idsach').value = id;
+            document.getElementById('md_idsachtemp').value = id;
+            var tensach = document.getElementById(id).parentElement.parentElement.getElementsByTagName("td")[1].innerText;
+            document.getElementById('md_tensach').value = tensach;
+            var hinhanh = document.getElementById(id).parentElement.parentElement.getElementsByTagName("td")[4].getElementsByTagName("img")[0].getAttribute("src");
+            document.getElementById('md_hinhanh').setAttribute("src", hinhanh);
+            document.getElementById('md_soluong').value = 1;
+        }
+        function nhaphang() {
+            var IDsach = document.getElementById('md_idsach').value;
+            var Soluong = document.getElementById('md_soluong').value;
+            var IDkho = document.getElementById('kho').value;
+            var model = {};
+            model.IDsach = IDsach;
+            model.Soluong = Soluong
+            model.IDkho = IDkho;
+            $.ajax({
+                type: "POST",
+                url: "/Admin/AdminSach/Nhaphang",
+                data: JSON.stringify(model),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    if (data.check = 1) {
+                        swal({
+                            title: 'Thành công',
+                            text: 'Dữ liệu đã được lưu thành công',
+                            icon: 'success',
+                            button: 'OK'
+                        });
+                        var Soluongcosan = document.getElementById(IDsach).parentElement.parentElement.getElementsByTagName("td")[5];
+                        Soluongcosan.innerHTML = parseInt(Soluongcosan.innerText) + parseInt(Soluong)
+                        modal.style.display = "none";
+                    }
+                    else {
+                        swal({
+                            title: "Lỗi!",
+                            text: "Thao tác của bạn không thành công!",
+                            icon: "error",
+                            confirmButtonText: "OK"
+                        });
+                    }
+                },
+                error: function (data) {
+                    console.log(data);
+                    alert("ngu");
+                }
+            });
+        }
+    </script>
+}

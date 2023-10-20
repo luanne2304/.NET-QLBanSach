@@ -1,0 +1,93 @@
+﻿@using bansach.DTO
+@using PagedList.Mvc
+@model PagedList.PagedList<HoadonDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().IDuser)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().IDvoucher)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Ghichu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Tongtien)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Thanhtien)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Ngaydat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Ngaydukiengiao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().Ngaygiao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().IDtinhtrang)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDuser)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDvoucher)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ghichu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tongtien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Thanhtien)
+                    </td>
+                    <td>
+                        @item.Ngaydat.ToShortDateString()
+                    </td>
+                    <td>
+                        @if (@item.Ngaydukiengiao.HasValue)
+                        {
+                            @item.Ngaydukiengiao.Value.ToShortDateString()
+                        }
+                    </td>
+                    <td>
+                        @if (@item.Ngaygiao.HasValue)
+                        {
+                            @item.Ngaygiao.Value.ToShortDateString()
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TentinhtrangHD)
+                    </td>
+                    <td>
+                        <a href="/Admin/AdminHoadon/Edit/@item.IDhoadon"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
+                    </td>
+                </tr>
+            }
+        </table>
+        <div>
+            <div class="MenuTrang">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+
+            </div>
+        </div>
+        </div>
+    </div>

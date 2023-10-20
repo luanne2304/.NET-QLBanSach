@@ -1,0 +1,142 @@
+﻿
+@model List<bansach.DTO.HoadonshipperDTO>
+
+@{
+    ViewBag.Title = "Nhandon";
+    Layout = "~/Areas/Shipper/Views/Shared/_ShipperLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <table class="table">
+            <tr>
+                <th>
+                    ID hóa đơn
+                </th>
+                <th>
+                    Người nhận
+                </th>
+                <th>
+                    SĐT
+                </th>
+                <th>
+                    Ghi chú
+                </th>
+                <th>
+                    Địa chỉ
+                </th>
+                <th>
+                    Thành tiền
+                </th>
+                <th>
+                    Tên phương thức
+                </th>
+                <th>
+                    Ngày dự kiến giao
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDhoadon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sdt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ghichu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Diachi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Thanhtien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tenphuongthuc)
+                    </td>
+                    <td>
+                        @item.Ngaydukiengiao.ToShortDateString()
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-xmark huydon" id="@item.IDhoadon"></i>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-check donedon" id="@item.IDhoadon"></i>
+                    </td>
+                </tr>
+            }
+        </table>
+        @section scripts{
+            <script>
+                //update khi nhan hoanthanhdon
+                const dones = document.querySelectorAll('.donedon');
+                dones.forEach(done => {
+                    done.addEventListener('click', (event) => {
+                        const id = event.target.id
+                        var model = {};
+                        model.idbill = id;
+                        $.ajax({
+                            type: "POST",
+                            url: "/Shipper/Home/Hoanthanhdon",
+                            data: JSON.stringify(model),
+                            dataType: "json",
+                            contentType: "application/json; charset=utf-8",
+                            success: function () {
+                                event.target.parentElement.parentElement.style.display = "none";
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Your work has been saved',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
+                            },
+                            error: function (data) {
+                                console.log(data);
+                                alert("ngu");
+                            }
+                        });
+                    });
+                });
+
+                //update khi nhan hoanthanhdon
+                const cancels = document.querySelectorAll('.huydon');
+                cancels.forEach(cancel => {
+                    cancel.addEventListener('click', (event) => {
+                        const id = event.target.id
+                        var model = {};
+                        model.idbill = id;
+                        $.ajax({
+                            type: "POST",
+                            url: "/Shipper/Home/Bomhang",
+                            data: JSON.stringify(model),
+                            dataType: "json",
+                            contentType: "application/json; charset=utf-8",
+                            success: function () {
+                                event.target.parentElement.parentElement.style.display = "none";
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Your work has been saved',
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                })
+                            },
+                            error: function (data) {
+                                console.log(data);
+                                alert("ngu");
+                            }
+                        });
+                    });
+                });
+            </script>
+        }
+        </div>
+    </div>
+
+

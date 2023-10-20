@@ -1,0 +1,88 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/a29daa6c0a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/Content/shopassets/css/styles.css" rel="stylesheet" />
+    <link href="~/Content/assetspro/csschung.css" rel="stylesheet" />
+
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Voucher", "Voucher", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    @if (@Session["IDrole"] != null)
+                    {
+                        if (@Session["IDrole"].ToString() == "2")
+                        {
+                            <li class="nav-item">@Html.ActionLink("Shipper", "Nhandon", "Home", new { area = "Shipper" }, new { @class = "nav-link" })</li>
+                        }
+                        if (@Session["IDrole"].ToString() == "3")
+                        {
+                            <li class="nav-item">@Html.ActionLink("Admin", "Index", "Home", new { area = "Admin" }, new { @class = "nav-link" })</li>
+                        }
+                    }
+                </ul>
+
+                <a class="btn btn-outline-dark" href="/Cart/Index">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill" id="soluongtronggio">@Session["tronggio"]</span>
+                </a>
+                @if (@Session["IDuser"] == null)
+                {
+                    <div id="myaccount">
+                        @Html.ActionLink("Đăng nhập", "Login", "Home")
+                    </div>
+                }
+                else
+                {
+                    <div id="myaccount">
+                        <a class="" href="">@Session["Hoten"]</a>
+                        <ul>
+                            <li>@Html.ActionLink("Tài khoản", "Profile", "Home", new { area = "" }, new { @style = "text-align:left;" })</li>
+                            <li>@Html.ActionLink("Hóa đơn", "Hoadon", "Home", new { area = "" }, new { @style = "text-align:left;" })</li>
+                            <li>@Html.ActionLink("Thay đổi mật khẩu", "Changepass", "Home", new { area = "" }, new { @style = "text-align:left;" })</li>
+                            <li>@Html.ActionLink("Đăng xuất", "Logout", "Home", new { area = "" }, new { @style = "text-align:left;" })</li>
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    @RenderBody()
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/Content/shopassets/js/scripts.js"></script>
+    <script src="~/Content/assetspro/sweetalert.min.js"></script>
+    <script src='~/Content/assetspro/jschung.js'></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+  

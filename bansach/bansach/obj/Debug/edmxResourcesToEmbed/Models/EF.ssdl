@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TiemsachcuaLuanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.ChitietHD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ChitietHD">
+    <Key>
+      <PropertyRef Name="IDhoadon" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Soluong" />
+      <PropertyRef Name="Tongdongia" />
+    </Key>
+    <Property Name="IDhoadon" Type="int" Nullable="false" />
+    <Property Name="IDsach" Type="int" Nullable="false" />
+    <Property Name="Soluong" Type="int" Nullable="false" />
+    <Property Name="Tongdongia" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.Chitietkho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Chitietkho">
+    <Key>
+      <PropertyRef Name="IDkho" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Soluong" />
+    </Key>
+    <Property Name="IDkho" Type="int" Nullable="false" />
+    <Property Name="IDsach" Type="int" Nullable="false" />
+    <Property Name="Soluong" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.Chitietsach' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Chitietsach">
+    <Key>
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="IDloai" />
+    </Key>
+    <Property Name="IDsach" Type="int" Nullable="false" />
+    <Property Name="IDloai" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.Danhgia' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Danhgia">
+    <Key>
+      <PropertyRef Name="IDuser" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Chitietrv" />
+    </Key>
+    <Property Name="Ngayrv" Type="datetime" />
+    <Property Name="IDuser" Type="int" Nullable="false" />
+    <Property Name="IDsach" Type="int" Nullable="false" />
+    <Property Name="Chitietrv" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TiemsachcuaLuan.dbo.Giohang' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Giohang">
+    <Key>
+      <PropertyRef Name="IDuser" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Soluong" />
+    </Key>
+    <Property Name="IDuser" Type="int" Nullable="false" />
+    <Property Name="IDsach" Type="int" Nullable="false" />
+    <Property Name="Soluong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hoadon">
+    <Key>
+      <PropertyRef Name="IDhoadon" />
+    </Key>
+    <Property Name="IDhoadon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDuser" Type="int" Nullable="false" />
+    <Property Name="IDvoucher" Type="varchar" MaxLength="20" />
+    <Property Name="Ghichu" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Tongtien" Type="float" Nullable="false" />
+    <Property Name="Thanhtien" Type="float" Nullable="false" />
+    <Property Name="Ngaydat" Type="date" Nullable="false" />
+    <Property Name="Ngaydukiengiao" Type="date" />
+    <Property Name="Ngaygiao" Type="date" />
+    <Property Name="IDtinhtrang" Type="int" Nullable="false" />
+    <Property Name="IDtaixe" Type="int" />
+    <Property Name="Diachi" Type="ntext" Nullable="false" />
+    <Property Name="TienShip" Type="float" Nullable="false" />
+    <Property Name="IDthanhtoan" Type="int" />
+    <Property Name="Danhgia" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kho">
+    <Key>
+      <PropertyRef Name="IDkho" />
+    </Key>
+    <Property Name="IDkho" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tenkho" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Diachikho" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+    <Property Name="Trungtam" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Loai">
+    <Key>
+      <PropertyRef Name="IDloai" />
+    </Key>
+    <Property Name="IDloai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tenloai" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="IDsach" />
+    </Key>
+    <Property Name="IDsach" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tensach" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Tacgia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mota" Type="ntext" Nullable="false" />
+    <Property Name="Gia" Type="float" Nullable="false" />
+    <Property Name="Hinhanh" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+    <Property Name="LuotXem" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Thanhtoan">
+    <Key>
+      <PropertyRef Name="IDthanhtoan" />
+    </Key>
+    <Property Name="IDthanhtoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tenphuongthuc" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TinhtrangHD">
+    <Key>
+      <PropertyRef Name="IDtinhtrangHD" />
+    </Key>
+    <Property Name="IDtinhtrangHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TentinhtrangHD" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IDuser" />
+    </Key>
+    <Property Name="IDuser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tk" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mk" Type="varchar" MaxLength="255" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sdt" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Tichluy" Type="float" Nullable="false" />
+    <Property Name="Thanhvien" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDrole" Type="int" Nullable="false" />
+    <Property Name="TrangThai" Type="bit" Nullable="false" />
+    <Property Name="TokenActive" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Voucher">
+    <Key>
+      <PropertyRef Name="IDvoucher" />
+    </Key>
+    <Property Name="IDvoucher" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Tenvoucher" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Chietkhau" Type="float" Nullable="false" />
+    <Property Name="Soluong" Type="int" Nullable="false" />
+    <Property Name="Trangthai" Type="bit" Nullable="false" />
+  </EntityType>
+  <Function Name="sp_addchitietsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idsach" Type="int" Mode="In" />
+    <Parameter Name="idloai" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_addsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tensach" Type="nvarchar" Mode="In" />
+    <Parameter Name="Tacgia" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mota" Type="ntext" Mode="In" />
+    <Parameter Name="Gia" Type="float" Mode="In" />
+    <Parameter Name="Hinhanh" Type="varchar" Mode="In" />
+    <Parameter Name="Soluong" Type="int" Mode="In" />
+    <Parameter Name="Trangthai" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_bomhang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idshiper" Type="int" Mode="In" />
+    <Parameter Name="idbill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_botragiohang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iduser" Type="int" Mode="In" />
+    <Parameter Name="idsach" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_checkcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idvoucher" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_chuyenkho" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idkhodi" Type="int" Mode="In" />
+    <Parameter Name="idkhoden" Type="int" Mode="In" />
+    <Parameter Name="idsach" Type="int" Mode="In" />
+    <Parameter Name="soluong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_dangki" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tk" Type="varchar" Mode="In" />
+    <Parameter Name="Mk" Type="varchar" Mode="In" />
+    <Parameter Name="Hoten" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mail" Type="varchar" Mode="In" />
+    <Parameter Name="Sdt" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sp_danhanhang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+    <Parameter Name="IDhoadon" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_danhgia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+    <Parameter Name="IDsach" Type="int" Mode="In" />
+    <Parameter Name="Chitietrv" Type="nvarchar" Mode="In" />
+    <Parameter Name="IDhoadon" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_deletechitietsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idsach" Type="int" Mode="In" />
+    <Parameter Name="idloai" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_doipass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+    <Parameter Name="oldpass" Type="nvarchar" Mode="In" />
+    <Parameter Name="newpass" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_dongdanhgia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+    <Parameter Name="IDhoadon" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_editprofile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+    <Parameter Name="Hoten" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mail" Type="varchar" Mode="In" />
+    <Parameter Name="Sdt" Type="char" Mode="In" />
+  </Function>
+  <Function Name="sp_editsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="ten" Type="nvarchar" Mode="In" />
+    <Parameter Name="tgia" Type="nvarchar" Mode="In" />
+    <Parameter Name="mota" Type="ntext" Mode="In" />
+    <Parameter Name="gia" Type="float" Mode="In" />
+    <Parameter Name="img" Type="varchar" Mode="In" />
+    <Parameter Name="trangthai" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_hoanthanhgiao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idshiper" Type="int" Mode="In" />
+    <Parameter Name="idbill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadbilldbyiduser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadchitiethoadon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadchitietkhobyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idkho" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadchitietsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadDanhgiabyIDsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDsach" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadgiohang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadhdxacnhan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_loadhoadon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_loadhoadonchuaxuly" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_loadIDsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+    <Parameter Name="IDhoadon" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadinfobilldbyiduser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+    <Parameter Name="IDhoadon" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadlistkho" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_loadlistkhohoatdong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idkho" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadloaisach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_loadlstdondagiao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idshiper" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadlstdondahuy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idshiper" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadlstdondanhan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idshiper" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadsachbyID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDsach" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadshipperfull" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_loadshipperhoatdong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_loadsphoatdong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_loadtheloaibyIDsach" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDsach" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_loadvoucherhoatdong" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tk" Type="varchar" Mode="In" />
+    <Parameter Name="Mk" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_phanviec" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iduser" Type="int" Mode="In" />
+    <Parameter Name="idbill" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_soluongtronggio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_thanhtoan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iduser" Type="int" Mode="In" />
+    <Parameter Name="idthanhtoan" Type="int" Mode="In" />
+    <Parameter Name="diachi" Type="ntext" Mode="In" />
+    <Parameter Name="ghichu" Type="nvarchar" Mode="In" />
+    <Parameter Name="idvoucher" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_themvaogiohang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iduser" Type="int" Mode="In" />
+    <Parameter Name="idsach" Type="int" Mode="In" />
+    <Parameter Name="soluong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_updategiohang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iduser" Type="int" Mode="In" />
+    <Parameter Name="idsach" Type="int" Mode="In" />
+    <Parameter Name="soluong" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_UpdateHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="int" Mode="In" />
+    <Parameter Name="idtinhtrang" Type="int" Mode="In" />
+    <Parameter Name="ngaydukien" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_xacnhandon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="int" Mode="In" />
+    <Parameter Name="ngaydukien" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_xacnhandonauto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idhd" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_yeucauhoanhang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDuser" Type="int" Mode="In" />
+    <Parameter Name="IDhoadon" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="TiemsachcuaLuanModelStoreContainer">
+    <EntitySet Name="Hoadon" EntityType="Self.Hoadon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kho" EntityType="Self.Kho" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Loai" EntityType="Self.Loai" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sach" EntityType="Self.Sach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Thanhtoan" EntityType="Self.Thanhtoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinhtrangHD" EntityType="Self.TinhtrangHD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Voucher" EntityType="Self.Voucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChitietHD" EntityType="Self.ChitietHD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ChitietHD].[IDhoadon] AS [IDhoadon], 
+    [ChitietHD].[IDsach] AS [IDsach], 
+    [ChitietHD].[Soluong] AS [Soluong], 
+    [ChitietHD].[Tongdongia] AS [Tongdongia]
+    FROM [dbo].[ChitietHD] AS [ChitietHD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Chitietkho" EntityType="Self.Chitietkho" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Chitietkho].[IDkho] AS [IDkho], 
+    [Chitietkho].[IDsach] AS [IDsach], 
+    [Chitietkho].[Soluong] AS [Soluong]
+    FROM [dbo].[Chitietkho] AS [Chitietkho]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Chitietsach" EntityType="Self.Chitietsach" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Chitietsach].[IDsach] AS [IDsach], 
+    [Chitietsach].[IDloai] AS [IDloai]
+    FROM [dbo].[Chitietsach] AS [Chitietsach]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Danhgia" EntityType="Self.Danhgia" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Danhgia].[Ngayrv] AS [Ngayrv], 
+    [Danhgia].[IDuser] AS [IDuser], 
+    [Danhgia].[IDsach] AS [IDsach], 
+    [Danhgia].[Chitietrv] AS [Chitietrv]
+    FROM [dbo].[Danhgia] AS [Danhgia]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Giohang" EntityType="Self.Giohang" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Giohang].[IDuser] AS [IDuser], 
+    [Giohang].[IDsach] AS [IDsach], 
+    [Giohang].[Soluong] AS [Soluong]
+    FROM [dbo].[Giohang] AS [Giohang]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

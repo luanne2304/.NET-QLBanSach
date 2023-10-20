@@ -1,0 +1,114 @@
+﻿@model bansach.Models.Sach
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<!-- Product section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img style="height:450px; width:370px;" class="card-img-top mb-5 mb-md-0" src="~/Content/AnhSP/@Model.Hinhanh" alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1">Mã sản phẩm: @Model.IDsach</div>
+                <h1 class="mb-1 display-5 fw-bolder">@Model.Tensach</h1>
+                <div>Auth: @Model.Tacgia</div>
+                <div>
+                    Thể loại:
+                    @{
+                        int temp = 0;
+                        string phay = " , ";
+                        foreach (string i in ViewBag.Theloai)
+                        {
+                            if (temp != 0)
+                            { @phay }
+                        @i;
+                        temp++;
+                    }
+                    }
+                </div>
+                <div class="lead mt-1 mb-1">Mô tả: @Model.Mota </div>
+                <div class="fs-5 mt-4 mb-5">
+                    <span>Giá: @Model.Gia vnd</span>
+                </div>
+                <div class="d-flex">
+                    <button onclick="minusqty()" style="border: 1px solid transparent;" class="btn btn-outline-dark minus-quantity">-</button>
+                    <input onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control text-center" id="inputQuantity" type="text" value="1" style="max-width: 3rem" />
+                    <button onclick="plusqty()" style="border: 1px solid transparent;" class="btn btn-outline-dark plus-quantity me-3">+</button>
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button" id="addToCartBtn">
+                        <i class="bi-cart-fill me-1"></i>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container px-4 px-lg-5 mt-5">
+        <h5>Đánh giá</h5>
+        @foreach (var i in ViewBag.Danhgia)
+        {
+            <table>
+                <tr>
+                    <th>@i.Ngayrv | @i.Hoten</th>
+                </tr>
+                <tr>
+                    <td>@i.Chitietrv</td>
+                </tr>
+            </table>
+        }
+    </div>
+</section>
+<ul class="notifications"></ul>
+@section scripts{
+<script>
+    function plusqty() {
+        var input = document.getElementsByTagName("input")[0];
+        input.value = parseInt(input.value) + 1;
+    }
+    function minusqty() {
+        var input = document.getElementsByTagName("input")[0];
+        if (parseInt(input.value) > 1) {
+            input.value = parseInt(input.value) - 1;
+        }
+    }
+    var inputField = document.getElementsByTagName("input")[0];
+    inputField.addEventListener("input", function (event) {
+        if (inputField.value === "") {
+            inputField.value = "1";
+        }
+    });
+    
+    $("#addToCartBtn").click(function () {
+        var quantity = $("#inputQuantity").val();
+        var urlParams = new URLSearchParams(window.location.search);
+        var id = urlParams.get('id');
+        var model = {};
+        model.idsach = id;
+        model.soluong = quantity;
+        $.ajax({
+            type: "POST",
+            url: "/Cart/Addtocart",
+            data: JSON.stringify(model),
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data.success == true) {
+                    document.getElementById('soluongtronggio').innerHTML = data.Cartcount;
+                    alertsuccess('success');
+                }
+                else {
+                    window.location.href = '/Home/Login';
+                }
+            },
+            error: function (data) {
+                console.log(data);
+                alert("ngu");
+            }
+        });
+    });
+</script>        
+}
+

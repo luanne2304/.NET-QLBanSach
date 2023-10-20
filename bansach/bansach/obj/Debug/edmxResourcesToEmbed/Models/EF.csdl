@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TiemsachcuaLuanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Hoadon">
+    <Key>
+      <PropertyRef Name="IDhoadon" />
+    </Key>
+    <Property Name="IDhoadon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDuser" Type="Int32" Nullable="false" />
+    <Property Name="IDvoucher" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Ghichu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tongtien" Type="Double" Nullable="false" />
+    <Property Name="Thanhtien" Type="Double" Nullable="false" />
+    <Property Name="Ngaydat" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Ngaydukiengiao" Type="DateTime" Precision="0" />
+    <Property Name="Ngaygiao" Type="DateTime" Precision="0" />
+    <Property Name="IDtinhtrang" Type="Int32" Nullable="false" />
+    <Property Name="IDtaixe" Type="Int32" />
+    <Property Name="Diachi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TienShip" Type="Double" Nullable="false" />
+    <Property Name="IDthanhtoan" Type="Int32" />
+    <Property Name="Danhgia" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kho">
+    <Key>
+      <PropertyRef Name="IDkho" />
+    </Key>
+    <Property Name="IDkho" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tenkho" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diachikho" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+    <Property Name="Trungtam" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Loai">
+    <Key>
+      <PropertyRef Name="IDloai" />
+    </Key>
+    <Property Name="IDloai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tenloai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sach">
+    <Key>
+      <PropertyRef Name="IDsach" />
+    </Key>
+    <Property Name="IDsach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tensach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Tacgia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gia" Type="Double" Nullable="false" />
+    <Property Name="Hinhanh" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+    <Property Name="LuotXem" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Thanhtoan">
+    <Key>
+      <PropertyRef Name="IDthanhtoan" />
+    </Key>
+    <Property Name="IDthanhtoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tenphuongthuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TinhtrangHD">
+    <Key>
+      <PropertyRef Name="IDtinhtrangHD" />
+    </Key>
+    <Property Name="IDtinhtrangHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TentinhtrangHD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IDuser" />
+    </Key>
+    <Property Name="IDuser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mk" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Tichluy" Type="Double" Nullable="false" />
+    <Property Name="Thanhvien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IDrole" Type="Int32" Nullable="false" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <Property Name="TokenActive" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Voucher">
+    <Key>
+      <PropertyRef Name="IDvoucher" />
+    </Key>
+    <Property Name="IDvoucher" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tenvoucher" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Chietkhau" Type="Double" Nullable="false" />
+    <Property Name="Soluong" Type="Int32" Nullable="false" />
+    <Property Name="Trangthai" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChitietHD">
+    <Key>
+      <PropertyRef Name="IDhoadon" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Soluong" />
+      <PropertyRef Name="Tongdongia" />
+    </Key>
+    <Property Name="IDhoadon" Type="Int32" Nullable="false" />
+    <Property Name="IDsach" Type="Int32" Nullable="false" />
+    <Property Name="Soluong" Type="Int32" Nullable="false" />
+    <Property Name="Tongdongia" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chitietkho">
+    <Key>
+      <PropertyRef Name="IDkho" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Soluong" />
+    </Key>
+    <Property Name="IDkho" Type="Int32" Nullable="false" />
+    <Property Name="IDsach" Type="Int32" Nullable="false" />
+    <Property Name="Soluong" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chitietsach">
+    <Key>
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="IDloai" />
+    </Key>
+    <Property Name="IDsach" Type="Int32" Nullable="false" />
+    <Property Name="IDloai" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Danhgia">
+    <Key>
+      <PropertyRef Name="IDuser" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Chitietrv" />
+    </Key>
+    <Property Name="Ngayrv" Type="DateTime" Precision="3" />
+    <Property Name="IDuser" Type="Int32" Nullable="false" />
+    <Property Name="IDsach" Type="Int32" Nullable="false" />
+    <Property Name="Chitietrv" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Giohang">
+    <Key>
+      <PropertyRef Name="IDuser" />
+      <PropertyRef Name="IDsach" />
+      <PropertyRef Name="Soluong" />
+    </Key>
+    <Property Name="IDuser" Type="Int32" Nullable="false" />
+    <Property Name="IDsach" Type="Int32" Nullable="false" />
+    <Property Name="Soluong" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TiemsachcuaLuanEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hoadons" EntityType="Self.Hoadon" />
+    <EntitySet Name="Khoes" EntityType="Self.Kho" />
+    <EntitySet Name="Loais" EntityType="Self.Loai" />
+    <EntitySet Name="Saches" EntityType="Self.Sach" />
+    <EntitySet Name="Thanhtoans" EntityType="Self.Thanhtoan" />
+    <EntitySet Name="TinhtrangHDs" EntityType="Self.TinhtrangHD" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Vouchers" EntityType="Self.Voucher" />
+    <EntitySet Name="ChitietHDs" EntityType="Self.ChitietHD" />
+    <EntitySet Name="Chitietkhoes" EntityType="Self.Chitietkho" />
+    <EntitySet Name="Chitietsaches" EntityType="Self.Chitietsach" />
+    <EntitySet Name="Danhgias" EntityType="Self.Danhgia" />
+    <EntitySet Name="Giohangs" EntityType="Self.Giohang" />
+    <FunctionImport Name="sp_addchitietsach">
+      <Parameter Name="idsach" Mode="In" Type="Int32" />
+      <Parameter Name="idloai" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_addsach">
+      <Parameter Name="Tensach" Mode="In" Type="String" />
+      <Parameter Name="Tacgia" Mode="In" Type="String" />
+      <Parameter Name="Mota" Mode="In" Type="String" />
+      <Parameter Name="Gia" Mode="In" Type="Double" />
+      <Parameter Name="Hinhanh" Mode="In" Type="String" />
+      <Parameter Name="Soluong" Mode="In" Type="Int32" />
+      <Parameter Name="Trangthai" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_bomhang">
+      <Parameter Name="idshiper" Mode="In" Type="Int32" />
+      <Parameter Name="idbill" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_botragiohang">
+      <Parameter Name="iduser" Mode="In" Type="Int32" />
+      <Parameter Name="idsach" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_checkcode" ReturnType="Collection(Double)">
+      <Parameter Name="idvoucher" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_chuyenkho">
+      <Parameter Name="idkhodi" Mode="In" Type="Int32" />
+      <Parameter Name="idkhoden" Mode="In" Type="Int32" />
+      <Parameter Name="idsach" Mode="In" Type="Int32" />
+      <Parameter Name="soluong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dangki">
+      <Parameter Name="Tk" Mode="In" Type="String" />
+      <Parameter Name="Mk" Mode="In" Type="String" />
+      <Parameter Name="Hoten" Mode="In" Type="String" />
+      <Parameter Name="Mail" Mode="In" Type="String" />
+      <Parameter Name="Sdt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_danhanhang">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+      <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_danhgia">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+      <Parameter Name="IDsach" Mode="In" Type="Int32" />
+      <Parameter Name="Chitietrv" Mode="In" Type="String" />
+      <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_deletechitietsach">
+      <Parameter Name="idsach" Mode="In" Type="Int32" />
+      <Parameter Name="idloai" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_doipass">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+      <Parameter Name="oldpass" Mode="In" Type="String" />
+      <Parameter Name="newpass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dongdanhgia">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+      <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_editprofile">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+      <Parameter Name="Hoten" Mode="In" Type="String" />
+      <Parameter Name="Mail" Mode="In" Type="String" />
+      <Parameter Name="Sdt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_editsach">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="ten" Mode="In" Type="String" />
+      <Parameter Name="tgia" Mode="In" Type="String" />
+      <Parameter Name="mota" Mode="In" Type="String" />
+      <Parameter Name="gia" Mode="In" Type="Double" />
+      <Parameter Name="img" Mode="In" Type="String" />
+      <Parameter Name="trangthai" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_hoanthanhgiao">
+      <Parameter Name="idshiper" Mode="In" Type="Int32" />
+      <Parameter Name="idbill" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadbilldbyiduser" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadbilldbyiduser_Result)">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadchitiethoadon" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadchitiethoadon_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadchitietkhobyid" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadchitietkhobyid_Result)">
+      <Parameter Name="idkho" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadchitietsach" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadchitietsach_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadDanhgiabyIDsach" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadDanhgiabyIDsach_Result)">
+      <Parameter Name="IDsach" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadgiohang" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadgiohang_Result)">
+      <Parameter Name="iduser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadhdxacnhan" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadhdxacnhan_Result)" />
+    <FunctionImport Name="sp_loadhoadon" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadhoadon_Result)" />
+    <FunctionImport Name="sp_loadhoadonchuaxuly" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadhoadonchuaxuly_Result)" />
+    <FunctionImport Name="sp_loadIDsach" ReturnType="Collection(Int32)">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+      <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadinfobilldbyiduser" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadinfobilldbyiduser_Result)">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+      <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadlistkho" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlistkho_Result)" />
+    <FunctionImport Name="sp_loadlistkhohoatdong" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlistkhohoatdong_Result)">
+      <Parameter Name="idkho" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadloaisach" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadloaisach_Result)" />
+    <FunctionImport Name="sp_loadlstdondagiao" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlstdondagiao_Result)">
+      <Parameter Name="idshiper" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadlstdondahuy" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlstdondahuy_Result)">
+      <Parameter Name="idshiper" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadlstdondanhan" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadlstdondanhan_Result)">
+      <Parameter Name="idshiper" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadsachbyID" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadsachbyID_Result)">
+      <Parameter Name="IDsach" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadshipperfull" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadshipperfull_Result)" />
+    <FunctionImport Name="sp_loadshipperhoatdong" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadshipperhoatdong_Result)" />
+    <FunctionImport Name="sp_loadsphoatdong" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadsphoatdong_Result)" />
+    <FunctionImport Name="sp_loadtheloaibyIDsach" ReturnType="Collection(String)">
+      <Parameter Name="IDsach" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_loadvoucherhoatdong" ReturnType="Collection(TiemsachcuaLuanModel.sp_loadvoucherhoatdong_Result)" />
+    <FunctionImport Name="sp_login" ReturnType="Collection(TiemsachcuaLuanModel.sp_login_Result)">
+      <Parameter Name="Tk" Mode="In" Type="String" />
+      <Parameter Name="Mk" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_phanviec">
+      <Parameter Name="iduser" Mode="In" Type="Int32" />
+      <Parameter Name="idbill" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_soluongtronggio" ReturnType="Collection(Int32)">
+      <Parameter Name="iduser" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_thanhtoan">
+      <Parameter Name="iduser" Mode="In" Type="Int32" />
+      <Parameter Name="idthanhtoan" Mode="In" Type="Int32" />
+      <Parameter Name="diachi" Mode="In" Type="String" />
+      <Parameter Name="ghichu" Mode="In" Type="String" />
+      <Parameter Name="idvoucher" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_themvaogiohang">
+      <Parameter Name="iduser" Mode="In" Type="Int32" />
+      <Parameter Name="idsach" Mode="In" Type="Int32" />
+      <Parameter Name="soluong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_updategiohang">
+      <Parameter Name="iduser" Mode="In" Type="Int32" />
+      <Parameter Name="idsach" Mode="In" Type="Int32" />
+      <Parameter Name="soluong" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_UpdateHD">
+      <Parameter Name="idhd" Mode="In" Type="Int32" />
+      <Parameter Name="idtinhtrang" Mode="In" Type="Int32" />
+      <Parameter Name="ngaydukien" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_xacnhandon">
+      <Parameter Name="idhd" Mode="In" Type="Int32" />
+      <Parameter Name="ngaydukien" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_xacnhandonauto">
+      <Parameter Name="idhd" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_yeucauhoanhang">
+      <Parameter Name="IDuser" Mode="In" Type="Int32" />
+      <Parameter Name="IDhoadon" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_loadbilldbyiduser_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="Int32" Name="IDuser" Nullable="false" />
+    <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="Double" Name="Tongtien" Nullable="false" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+    <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+    <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+    <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="TienShip" Nullable="false" />
+    <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+    <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+    <Property Type="Double" Name="Chietkhau" Nullable="false" />
+    <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Tentaixe" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tenkh" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Sdtkh" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="Soluong" Nullable="false" />
+    <Property Type="Double" Name="Tongdongia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadchitiethoadon_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="Int32" Name="IDuser" Nullable="false" />
+    <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="Double" Name="Tongtien" Nullable="false" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+    <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+    <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+    <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="TienShip" Nullable="false" />
+    <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+    <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+    <Property Type="Int32" Name="Soluong" Nullable="false" />
+    <Property Type="Double" Name="Tongdongia" Nullable="false" />
+    <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="IDsach" Nullable="false" />
+    <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_loadchitietkhobyid_Result">
+    <Property Type="String" Name="Tenkho" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="IDkho" Nullable="false" />
+    <Property Type="Int32" Name="IDsach" Nullable="false" />
+    <Property Type="Int32" Name="Soluong" Nullable="false" />
+    <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="sp_loadchitietsach_Result">
+    <Property Type="Int32" Name="IDsach" Nullable="false" />
+    <Property Type="Int32" Name="IDloai" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadDanhgiabyIDsach_Result">
+    <Property Type="DateTime" Name="Ngayrv" Nullable="true" Precision="23" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Chitietrv" Nullable="false" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="sp_loadgiohang_Result">
+    <Property Type="Int32" Name="IDsach" Nullable="false" />
+    <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Tacgia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="Soluong" Nullable="false" />
+    <Property Type="Double" Name="Gia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadhdxacnhan_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_loadhoadon_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="Int32" Name="IDuser" Nullable="false" />
+    <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="Double" Name="Tongtien" Nullable="false" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+    <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+    <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+    <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="TienShip" Nullable="false" />
+    <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+    <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+    <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_loadhoadonchuaxuly_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="Int32" Name="IDuser" Nullable="false" />
+    <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="Double" Name="Tongtien" Nullable="false" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+    <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+    <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+    <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="TienShip" Nullable="false" />
+    <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+    <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+    <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_loadinfobilldbyiduser_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="Int32" Name="IDuser" Nullable="false" />
+    <Property Type="String" Name="IDvoucher" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="Double" Name="Tongtien" Nullable="false" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydat" Nullable="false" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+    <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+    <Property Type="Int32" Name="IDtinhtrang" Nullable="false" />
+    <Property Type="Int32" Name="IDtaixe" Nullable="true" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="TienShip" Nullable="false" />
+    <Property Type="Int32" Name="IDthanhtoan" Nullable="true" />
+    <Property Type="Boolean" Name="Danhgia" Nullable="false" />
+    <Property Type="Double" Name="Chietkhau" Nullable="false" />
+    <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TentinhtrangHD" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Tentaixe" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Tenkh" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Sdtkh" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="Soluong" Nullable="false" />
+    <Property Type="Double" Name="Tongdongia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadlistkho_Result">
+    <Property Type="Int32" Name="IDkho" Nullable="false" />
+    <Property Type="String" Name="Tenkho" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Diachikho" Nullable="false" MaxLength="200" />
+    <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+    <Property Type="Boolean" Name="Trungtam" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadlistkhohoatdong_Result">
+    <Property Type="Int32" Name="IDkho" Nullable="false" />
+    <Property Type="String" Name="Tenkho" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Diachikho" Nullable="false" MaxLength="200" />
+    <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+    <Property Type="Boolean" Name="Trungtam" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadloaisach_Result">
+    <Property Type="Int32" Name="IDloai" Nullable="false" />
+    <Property Type="String" Name="Tenloai" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_loadlstdondagiao_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+    <Property Type="DateTime" Name="Ngaygiao" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_loadlstdondahuy_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_loadlstdondanhan_Result">
+    <Property Type="Int32" Name="IDhoadon" Nullable="false" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Ghichu" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Diachi" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="Thanhtien" Nullable="false" />
+    <Property Type="String" Name="Tenphuongthuc" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Ngaydukiengiao" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_loadsachbyID_Result">
+    <Property Type="Int32" Name="IDsach" Nullable="false" />
+    <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Tacgia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Mota" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="Gia" Nullable="false" />
+    <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="SoLuong" Nullable="false" />
+    <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+    <Property Type="Int32" Name="LuotXem" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadshipperfull_Result">
+    <Property Type="Int32" Name="IDuser" Nullable="false" />
+    <Property Type="String" Name="Tk" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Mail" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="IDrole" Nullable="false" />
+    <Property Type="Boolean" Name="TrangThai" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadshipperhoatdong_Result">
+    <Property Type="Int32" Name="IDuser" Nullable="false" />
+    <Property Type="String" Name="Tk" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Mail" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="IDrole" Nullable="false" />
+    <Property Type="Boolean" Name="TrangThai" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadsphoatdong_Result">
+    <Property Type="Int32" Name="IDsach" Nullable="false" />
+    <Property Type="String" Name="Tensach" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Tacgia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Mota" Nullable="false" MaxLength="Max" />
+    <Property Type="Double" Name="Gia" Nullable="false" />
+    <Property Type="String" Name="Hinhanh" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="SoLuong" Nullable="false" />
+    <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+    <Property Type="Int32" Name="LuotXem" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_loadvoucherhoatdong_Result">
+    <Property Type="String" Name="IDvoucher" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Tenvoucher" Nullable="false" MaxLength="100" />
+    <Property Type="Double" Name="Chietkhau" Nullable="false" />
+    <Property Type="Int32" Name="Soluong" Nullable="false" />
+    <Property Type="Boolean" Name="Trangthai" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_login_Result">
+    <Property Type="Int32" Name="IDuser" Nullable="false" />
+    <Property Type="String" Name="Tk" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Mk" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Mail" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Sdt" Nullable="false" MaxLength="10" />
+    <Property Type="Double" Name="Tichluy" Nullable="false" />
+    <Property Type="String" Name="Thanhvien" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="IDrole" Nullable="false" />
+    <Property Type="Boolean" Name="TrangThai" Nullable="false" />
+    <Property Type="String" Name="TokenActive" Nullable="false" MaxLength="10" />
+    <Property Type="Boolean" Name="Active" Nullable="false" />
+  </ComplexType>
+</Schema>

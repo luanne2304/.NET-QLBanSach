@@ -1,0 +1,133 @@
+﻿@using bansach.DTO
+@using PagedList.Mvc
+@model PagedList.PagedList<ChitietkhoDTO>
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <div>
+            <h4 class="ml-2 mt-2">@ViewBag.thongtinkho.Tenkho</h4>
+            <hr />
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Mã sách</th>
+                        <th scope="col">Tên sách</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Số lượng</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.IDsach)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Tensach)</td>
+                            <td hidden>/Content/AnhSP/@item.Hinhanh</td>
+                            <td><img style="width:100px; height:140px" src="~/Content/AnhSP/@item.Hinhanh" alt="" /></td>
+                            <td>@Html.DisplayFor(modelItem => item.Soluong)</td>
+                            <td><button onclick="chuyenkho(this.id)" type="button" class="btn btn-info" id="sach@(item.IDsach)">Chuyển kho</button></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div>
+                <div class="MenuTrang">
+                    @Html.PagedListPager(Model, page => Url.Action("Details", new { page = page }))
+
+                </div>
+            </div>
+
+        </div>
+        <div id="myModal" class="hidenmodal">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Chuyển kho</h5>
+                        <span onclick="closemd()" class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <img id="md_hinhanh" style="width:100px; height:150px" src="" alt="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="md_idsachtemp">ID sản phẩm:</label>
+                            <input disabled class="form-control" id="md_idsachtemp" name="md_idsachtemp" type="text">
+                            <input hidden class="form-control" id="md_idsach" name="md_idsach" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="md_tensach">Tên sản phẩm:</label>
+                            <input disabled class="form-control" id="md_tensach" name="md_tensach" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="md_soluongkho">Số lượng trong kho:</label>
+                            <input disabled class="form-control" type="text" id="md_soluongkho" name="md_soluongkho">
+                        </div>
+                        <div class="form-group">
+                            <label for="md_soluongcanchuyen">Số lượng cần chuyển:</label>
+                            <input onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" id="md_soluongcanchuyen" name="md_soluongcanchuyen" placeholder="Nhập số lượng">
+                        </div>
+                        <div class="form-group">
+                            <label for="md_khoden">Chọn kho đến: </label>
+                            @Html.DropDownList("khoden", null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                        <div class="modal-footer">
+                            <button onclick="closemd()" type="button" class="btn btn-secondary close-footer">
+                                Đóng
+                            </button>
+                            <button name="submit" type="submit" class="btn btn-primary order" value="@ViewBag.thongtinkho.IDkho">
+                                Nhập
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@section scripts{
+    @if (!string.IsNullOrEmpty(ViewBag.StatusMessage))
+    {
+        <script>
+            var statusMessage = "@ViewBag.StatusMessage";
+            if (statusMessage == "thanhcong")
+            {
+                swal({
+                title: 'Thành công',
+                        text: 'Chuyển thành công!',
+                        icon: 'success',
+                        button: 'OK'
+                    });
+            }
+            if (statusMessage == "thatbai") {
+                    swal({
+                        title: "Lỗi!",
+                        text: "Chuyển thất bại!",
+                        icon: "error",
+                        confirmButtonText: "OK"
+                    });
+            }
+        </script>
+    }
+        <script>
+            function chuyenkho(id) {
+                modal.style.display = "block";
+                var idsach = document.getElementById(id).parentElement.parentElement.getElementsByTagName("td")[0].innerText;
+                document.getElementById('md_idsach').value = idsach;
+                var md_idsachtemp = document.getElementById(id).parentElement.parentElement.getElementsByTagName("td")[0].innerText;
+                document.getElementById('md_idsachtemp').value = md_idsachtemp;
+                var tensach = document.getElementById(id).parentElement.parentElement.getElementsByTagName("td")[1].innerText;
+                document.getElementById('md_tensach').value = tensach;
+                var hinhanh = document.getElementById(id).parentElement.parentElement.getElementsByTagName("td")[2].innerText;
+                document.getElementById('md_hinhanh').setAttribute("src", hinhanh);
+                var soluongkho = document.getElementById(id).parentElement.parentElement.getElementsByTagName("td")[4].innerText;
+                document.getElementById('md_soluongkho').value = soluongkho;
+                document.getElementById('md_soluongcanchuyen').value = 1;
+            }
+        </script>
+}

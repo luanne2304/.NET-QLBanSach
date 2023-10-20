@@ -1,0 +1,351 @@
+﻿@model bansach.DAO.ThanhtoanHDDTO
+
+@{
+    ViewBag.Title = "Cart Page";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+<div class="container px-4 px-lg-5 mt-3">
+    <div class="container h-100 pt-1 pb-5">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="table-responsive">
+                    <h2 style="text-align: center;">Giỏ hàng</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="h5">Sản phẩm</th>
+                                <th scope="col">Đơn giá</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Số tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- item cart-->
+                            @if (((List<bansach.DTO.GiohangDTO>)ViewBag.GH).Count() == 0)
+                            {
+                                <tr>
+                                    <th>Chưa có sản phẩm!</th>
+                                    <th>@Html.ValidationMessageFor(model => model.Sanpham, "", new { @class = "text-danger" })</th>
+                                </tr>
+                            }
+                            else
+                            {
+                                foreach (var i in ViewBag.GH)
+                                {
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex align-items-center">
+                                                <img src="~/Content/AnhSP/@i.Hinhanh" class="img-fluid rounded-3"
+                                                     style="width: 120px;" alt="Book">
+                                                <div class="flex-column ms-4">
+                                                    <p class="mb-2">@i.Tensach</p>
+                                                    <p class="mb-0">@i.Tacgia</p>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="align-middle">
+                                            <p class="mb-0 p-giasp" style="font-weight: 500;">@i.Gia</p>
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="d-flex flex-row">
+                                                <button style="border: 1px solid transparent;" class="btn btn-outline-dark minus-quantity">-</button>
+                                                <input onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="@i.IDsach" min="0" name="quantity" value="@i.Soluong" type="number"
+                                                       class="form-control form-control-sm x" style="width: 50px;" />
+                                                <button style="border: 1px solid transparent;" class="btn btn-outline-dark plus-quantity">+</button>
+                                            </div>
+                                        </td>
+                                        <td class="align-middle">
+                                            <p data-product-value="@((double)i.Gia * (int)i.Soluong)" class="mb-0 p-tongdongia" style="font-weight: 700;">@( (double)i.Gia * (int)i.Soluong )</p>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+
+                @using (Html.BeginForm("Index", "Cart", FormMethod.Post))
+                {
+                    <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+                        <div class="card-body p-4">
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                                    <form>
+                                        <div class="d-flex flex-row pb-3">
+                                            <div class="d-flex align-items-center pe-2">
+                                                <input class="form-check-input" type="radio" name="phuongthucthanhtoan" id="radioNoLabel1v"
+                                                       value="1" aria-label="..." checked />
+                                            </div>
+                                            <div class="rounded border w-100 p-3">
+                                                <p class="d-flex align-items-center mb-0">
+                                                    <i class="fab fa-cc-mastercard fa-2x text-dark pe-2"></i>Thanh toán khi nhận hàng
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row pb-3">
+                                            <div class="d-flex align-items-center pe-2">
+                                                <input class="form-check-input" type="radio" name="phuongthucthanhtoan" id="radioNoLabel2v"
+                                                       value="2" aria-label="..." />
+                                            </div>
+                                            <div class="rounded border w-100 p-3">
+                                                <p class="d-flex align-items-center mb-0">
+                                                    <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Paypal
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row pb-3">
+                                            <div class="d-flex align-items-center pe-2">
+                                                <input class="form-check-input" type="radio" name="phuongthucthanhtoan" id="radioNoLabel2v"
+                                                       value="3" aria-label="..." />
+                                            </div>
+                                            <div class="rounded border w-100 p-3">
+                                                <p class="d-flex align-items-center mb-0">
+                                                    <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Momo
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6 col-lg-4 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-outline mb-4 mb-xl-2 ">
+                                                <label class="form-label" for="typeName">Địa chỉ nhận hàng:</label>
+                                                @Html.ValidationMessageFor(model => model.Diachi, "", new { @class = "text-danger" })
+                                                <input style="font-size: 0.8rem;" type="text" id="i-diachi" class="form-control form-control-lg" siez="17"
+                                                       placeholder="Nhập địa chỉ tại đây" name="Diachi" />
+                                            </div>
+                                            <div class="form-outline mb-4 mb-xl-2 ">
+                                                <label class="form-label" for="typeName">Ghi chú (Nếu có):</label>
+                                                <input style="font-size: 0.8rem;" type="text" id="i-ghichu" class="form-control form-control-lg" siez="17"
+                                                       placeholder="Nhập ghi chú tại đây" name="ghichu" />
+                                            </div>
+                                            <div class="form-outline mb-4 mb-xl-2">
+                                                <label class="form-label" for="typeName">Mã giảm (Nếu có):</label>
+                                                @Html.ValidationMessageFor(model => model.MaGiam, "", new { @class = "text-danger" })
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <input style="font-size: 0.8rem;" type="text" id="i-magiam" class="form-control form-control-lg" siez="17"
+                                                               placeholder="Nhập mã tại đây" name="magiam" />
+                                                    </div>
+                                                    <div class="col-1">
+                                                        <button type="button" onclick="useVoucher()" class="btn btn-secondary">Áp mã</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3">
+                                    <div class="d-flex justify-content-between" style="font-weight: 500;">
+                                        <p class="mb-2">Tổng</p>
+                                        <p id="p-tientong" class="mb-2">NaN</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between" style="font-weight: 500;">
+                                        <p class="mb-0">Phí giao</p>
+                                        <p id="p-tienship" class="mb-2">NaN</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between" style="font-weight: 500;">
+                                        <p class="mb-0">Mã giảm</p>
+                                        <p id="p-tiengiam" class="mb-0">0 VNĐ</p>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                                        <p class="mb-2">Thành tiền</p>
+                                        <p id="p-thanhtien" class="mb-2">NaN</p>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-success btn-block btn-lg ">
+                                        <div class="d-flex justify-content-between">
+                                            <span>Thanh toán</span>
+                                        </div>
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+
+        // ap ma
+        function useVoucher() {
+            var inputV = document.getElementById('i-magiam').value;
+            var model = {};
+            model.magiam = inputV;
+            $.ajax({
+                type: "POST",
+                url: "/Cart/Checkcode",
+                data: JSON.stringify(model),
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    var temp = document.getElementById('p-tientong').innerText.split(" ");
+                    document.getElementById('p-tiengiam').innerHTML = "-" + data.Chietkhau * temp[0] + " VNĐ";
+                    sumProductValues();
+                },
+                error: function (data) {
+                    console.log(data);
+                    alert("ngu");
+                }
+            });
+        }
+
+
+        //tinh tien
+        function sumProductValues() {
+            var productValues = document.querySelectorAll('[data-product-value]');
+            var total = 0;
+            for (var i = 0; i < productValues.length; i++) {
+                total += parseFloat(productValues[i].getAttribute('data-product-value'));
+            }
+            document.getElementById('p-tientong').innerHTML = total + " VNĐ";
+            var tiengiam = document.getElementById('p-tiengiam').innerText;
+            var giam = tiengiam.split(" ");
+            var tienship;
+            if (total >= 100000) {
+                tienship = 0;
+                document.getElementById('p-tienship').innerHTML = "0 VNĐ";
+            }
+            else {
+                tienship = 20000;
+                document.getElementById('p-tienship').innerHTML = "20000 VNĐ";
+            }
+            document.getElementById('p-thanhtien').innerHTML = total + tienship + parseFloat(giam[0]) + " VNĐ";
+        }
+        sumProductValues();
+
+        //update khi nhan nut them
+        const pluss = document.querySelectorAll('.plus-quantity');
+        pluss.forEach(plus => {
+            plus.addEventListener('click', (event) => {
+                const input = event.target.parentElement.getElementsByTagName("input")[0];
+                const value = input.value;
+                const inputId = input.id;
+                input.value = parseInt(value) + 1;
+                var gia = document.getElementById(inputId).parentElement.parentElement.parentElement.getElementsByClassName("p-giasp")[0].innerText;
+                var tongdongia = document.getElementById(inputId).parentElement.parentElement.parentElement.getElementsByClassName("p-tongdongia")[0];
+                tongdongia.innerHTML = gia * (parseInt(value) + 1);
+                tongdongia.setAttribute('data-product-value', gia * (parseInt(value) + 1));
+                var model = {};
+                model.idsach = inputId;
+                model.soluong = 1;
+                $.ajax({
+                    type: "POST",
+                    url: "/Cart/Addtocart",
+                    data: JSON.stringify(model),
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        document.getElementById('soluongtronggio').innerHTML = data.Cartcount;
+                        sumProductValues();
+                    },
+                    error: function (data) {
+                        console.log(data);
+                        alert("ngu");
+                    }
+                });
+            });
+        });
+
+        //update khi nhan nut bot
+        const minuss = document.querySelectorAll('.minus-quantity');
+        minuss.forEach(minus => {
+            minus.addEventListener('click', (event) => {
+                const input = event.target.parentElement.getElementsByTagName("input")[0];
+                const value = input.value;
+                const inputId = input.id;
+                input.value = parseInt(value) - 1;
+                if (value == 1) {
+                    event.target.parentElement.parentElement.parentElement.style.display = "none";
+                }
+                var gia = document.getElementById(inputId).parentElement.parentElement.parentElement.getElementsByClassName("p-giasp")[0].innerText;
+                var tongdongia = document.getElementById(inputId).parentElement.parentElement.parentElement.getElementsByClassName("p-tongdongia")[0];
+                tongdongia.innerHTML = gia * (parseInt(value) - 1);
+                tongdongia.setAttribute('data-product-value', gia * (parseInt(value) - 1));
+                var model = {};
+                model.idsach = inputId;
+                $.ajax({
+                    type: "POST",
+                    url: "/Cart/Subtocart",
+                    data: JSON.stringify(model),
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        document.getElementById('soluongtronggio').innerHTML = data.Cartcount;
+                        sumProductValues();
+                    },
+                    error: function (data) {
+                        console.log(data);
+                        alert("ngu");
+                    }
+                });
+            });
+        });
+
+        //update soluong khi nhap
+        const inputs = document.querySelectorAll('.x');
+        inputs.forEach(input => {
+            input.addEventListener('input', (event) => {
+                if (event.target.value === "") {
+                    event.target.value = "0";
+                }
+                const value = event.target.value;
+                const inputId = event.target.id;
+                if (value == 0) {
+                    event.target.parentElement.parentElement.parentElement.style.display = "none";
+                }
+                var gia = document.getElementById(inputId).parentElement.parentElement.parentElement.getElementsByClassName("p-giasp")[0].innerText;
+                var tongdongia = document.getElementById(inputId).parentElement.parentElement.parentElement.getElementsByClassName("p-tongdongia")[0];
+                tongdongia.innerHTML = gia * value;
+                tongdongia.setAttribute('data-product-value', gia * value);
+                var model = {};
+                model.idsach = inputId;
+                model.soluong = value;
+                $.ajax({
+                    type: "POST",
+                    url: "/Cart/Updatetocart",
+                    data: JSON.stringify(model),
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        document.getElementById('soluongtronggio').innerHTML = data.Cartcount;
+                        sumProductValues();
+                    },
+                    error: function (data) {
+                        console.log(data);
+                        alert("ngu");
+                    }
+                });
+            });
+        });
+
+    </script>
+}

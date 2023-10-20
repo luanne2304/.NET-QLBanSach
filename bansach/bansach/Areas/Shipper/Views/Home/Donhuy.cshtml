@@ -1,0 +1,72 @@
+﻿@model List<bansach.DTO.HoadonshipperDTO>
+
+@{
+    ViewBag.Title = "Donhuy";
+    Layout = "~/Areas/Shipper/Views/Shared/_ShipperLayout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card shadow mb-4">
+        <table class="table">
+            <tr>
+                <th>
+                    ID hóa đơn
+                </th>
+                <th>
+                    Người nhận
+                </th>
+                <th>
+                    SĐT
+                </th>
+                <th>
+                    Ghi chú
+                </th>
+                <th>
+                    Địa chỉ
+                </th>
+                <th>
+                    Thành tiền
+                </th>
+                <th>
+                    Tên phương thức
+                </th>
+                <th>
+                    Ngày dự kiến giao
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDhoadon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HoTen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sdt)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ghichu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Diachi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Thanhtien)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tenphuongthuc)
+                    </td>
+                    <td>
+                        @item.Ngaydukiengiao.ToShortDateString()
+                    </td>
+                    <td>
+                        Đã hủy
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

@@ -1,0 +1,153 @@
+﻿@model List<bansach.DTO.HoadonproDTO>
+
+@{
+    ViewBag.Title = "Hoadon";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div class="rounded  mt-5" >
+    @{
+        int temp = 0;
+        foreach (var hd in Model)
+        {
+            if (temp != hd.IDhoadon)
+            {
+                <table class="table mt-3 " id="table_hoadon_user" style="background-color: #F8F8FF; width: 900px; margin: auto; border-radius: 10px; ">
+                    <tr>
+                            <td style="padding: 18px 18px 18px 50px " colspan="2"><strong>Mã đơn hàng: </strong> <p style="background-color: #88f77f;" class="text-white p-2 rounded-pill">  @hd.IDhoadon</p></td>
+                            <td colspan="2">
+                                <strong>Trạng thái: </strong>
+
+                                @if (hd.IDtinhtrang == 1)
+                                {
+                                    <p style="background-color: #eef77f; color:black;" class="text-black p-2 rounded-pill">@hd.TentinhtrangHD </p>
+                                }
+                                @if (hd.IDtinhtrang == 2 || hd.IDtinhtrang == 6)
+                                {
+                                    <p style="background-color: #f79a7f; color: black;" class="text-black p-2 rounded-pill">@hd.TentinhtrangHD </p>
+                                }
+                                @if (hd.IDtinhtrang == 3)
+                                {
+                                    <p style="background-color: #7fd2f7; color: black;" class="text-black p-2 rounded-pill">@hd.TentinhtrangHD </p>
+                                }
+                                @if (hd.IDtinhtrang == 4) 
+                                {
+                                    <p style = "background-color: #f77fc9; color: black;" class=" text-black p-2 rounded-pill">@hd.TentinhtrangHD </p>
+                                }
+                                @if (hd.IDtinhtrang == 5 || hd.IDtinhtrang == 7)
+                                {
+                                    <p style = "background-color: #a4f77f; color: black;" class="text-black p-2 rounded-pill">@hd.TentinhtrangHD </p>
+                                }
+                            </td>
+                    </tr>
+                    @foreach (var i in Model)
+                    {
+                        if (i.IDhoadon == hd.IDhoadon)
+                        {
+                            <tr class="count_sp">
+                                <td style="width: 100px; padding-left: 50px">
+                                    <img class="anh_sp" style="width: 100px; height: 130px;" src="~/Content/AnhSP/@i.Hinhanh" alt="">
+                                </td>
+                                <td class="ten_sp" style="padding-left: 80px; width:40%">@i.Tensach</td>
+                                <td>@i.Soluong</td>
+                                <td style="padding-left: 80px; "><p style="color: black;">Tổng đơn giá: @i.Tongdongia</p></td>
+                            </tr>
+                        }
+                    }
+                    <tr>
+                        <td colspan="4" style="padding-left: 72%; "><strong>Tổng tiền: </strong>  @hd.Tongtien</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="padding-left: 72%; "><strong>Thành tiền: </strong> @hd.Thanhtien</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: right;">
+                            @if (hd.IDtinhtrang == 7 && hd.Danhgia)
+                            {
+                                <button type="button" id="@hd.IDhoadon" onclick="showdanhgia()" class="btn btn-outline-info">Đánh giá</button>
+                            }
+                            @if (hd.IDtinhtrang == 5)
+                            {
+                                <button type="button" id="@hd.IDhoadon" onclick="nhanhang(this.id)" class="btn btn-success">Nhận thành công</button>
+                            }
+                            @if (hd.IDtinhtrang == 8)
+                            {
+                                <button type="button" id="@hd.IDhoadon" onclick="nhanhang(this.id)" class="btn btn-warning">Hủy yêu cầu</button>
+                            }
+                            <button type="button" id="@hd.IDhoadon" onclick="infobill(this.id)" class="btn btn-outline-secondary">Chi tiết đơn</button>
+                        </td>
+                    </tr>
+                </table>
+            }
+            temp = hd.IDhoadon;
+        }
+    }
+    <div id="myModal" class="hidenmodal">
+        <form action="/Home/Danhgia" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Đánh giá sản phẩm</h5>
+                    <span onclick="closemd()" class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div id="lstsp_candanhgia">
+                            @* loadsanpham *@
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="closemd()" type="button" class="btn btn-secondary close-footer">
+                            Đóng
+                        </button>
+                        <button name="submit" type="submit" class="btn btn-primary order" id="btn_danhgia" value="">
+                            Nhập
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        function infobill(id) {
+            window.location = "/Home/ChitietHoadon?IDhoadon="+id;
+        }
+        function nhanhang(id) {
+            window.location = "/Home/Nhanhang?IDhoadon=" + id;
+        }
+        function hoanhang(id) {
+            window.location = "/Home/Hoanhang?IDhoadon=" + id;
+        }
+        function showdanhgia() {
+            modal.style.display = "block";
+            document.getElementById('btn_danhgia').value = event.target.getAttribute("id");
+            var a = event.target.parentElement.parentElement.parentElement;
+            var lstspCandanhgia = document.getElementById('lstsp_candanhgia');
+            lstspCandanhgia.innerHTML = '';
+            for (var b = 0; ; b++) {
+                var lstspCandanhgia = document.getElementById('lstsp_candanhgia');
+                if (a.getElementsByClassName('count_sp')[b] != null) {
+                    var newDiv = document.createElement('div');
+                    var imageSrc = a.getElementsByClassName('count_sp')[b].getElementsByClassName('anh_sp')[0].getAttribute('src');
+                    var tenspmodal = a.getElementsByClassName('count_sp')[b].getElementsByClassName('ten_sp')[0].innerHTML;
+                    newDiv.innerHTML = '<div class="form-group">\n' +
+                        '<img id="hinhanhsp" style="width:100px; height:150px" src="' + imageSrc + '" alt="" />\n' +
+                        '</div>\n' +
+                        '<div class="form-group">\n' +
+                        '<label for="md_tensach">Tên sản phẩm:</label>\n' +
+                        '<input disabled class="form-control" id="tensp" value="' + tenspmodal + '" name="tensp" type="text">\n' +
+                        '</div>\n' +
+                        '<div class="form-group border-bottom">\n' +
+                        '<label for="md_soluongcanchuyen">Đánh giá:</label>\n' +
+                        '<input class="form-control" type="text" name="i_danhgia' + b + '" placeholder="Đánh giá sản phẩm">\n' +
+                        '</div>';
+                    lstspCandanhgia.appendChild(newDiv);
+                }
+                else {
+                    break;
+                }
+            }
+        }
+    </script>
+}
+

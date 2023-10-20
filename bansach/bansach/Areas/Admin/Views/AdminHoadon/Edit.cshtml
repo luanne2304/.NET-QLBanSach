@@ -1,0 +1,152 @@
+﻿@model List<bansach.DTO.ChitietHDDTO>
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow mb-4" style="width:1000px; margin:auto;">
+        <h2 class="ml-2 mt-2">Cập nhật hóa đơn</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.FirstOrDefault().IDhoadon)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().IDuser, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstOrDefault().IDuser, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstOrDefault().IDuser, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().IDvoucher, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstOrDefault().IDvoucher, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstOrDefault().IDvoucher, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().Ghichu, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstOrDefault().Ghichu, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstOrDefault().Ghichu, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().Tongtien, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstOrDefault().Tongtien, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstOrDefault().Tongtien, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().Thanhtien, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstOrDefault().Thanhtien, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FirstOrDefault().Thanhtien, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().Ngaydat, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <input type="date" id="Ngaydat" name="Ngaydat" value="@Model.LastOrDefault().Ngaydat.ToString("yyyy-MM-dd")" class="form-control" />
+                @Html.ValidationMessageFor(model => model.FirstOrDefault().Ngaydat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().Ngaydukiengiao, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                @if (Model.FirstOrDefault().Ngaydukiengiao.HasValue)
+                {
+                    <input type="date" id="Ngaydukiengiao" name="Ngaydukiengiao" value="@Model.LastOrDefault().Ngaydukiengiao.Value.ToString("yyyy-MM-dd")" class="form-control" />
+                }
+                else
+                {
+                    <input type="date" id="Ngaydukiengiao" name="Ngaydukiengiao" class="form-control" />
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().Ngaygiao, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                @if (Model.FirstOrDefault().Ngaygiao.HasValue)
+                {
+                    <input type="date" id="Ngaygiao" name="Ngaygiao" value="@Model.LastOrDefault().Ngaygiao.Value.ToString("yyyy-MM-dd")" class="form-control" />
+                }
+                else
+                {
+                    <input type="date" id="Ngaygiao" name="Ngaygiao" class="form-control" />
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstOrDefault().IDtinhtrang, htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                @if (Model.FirstOrDefault().IDtinhtrang == 6)
+                {
+                    <select id="IDtinhtrang" name="IDtinhtrang">
+                        <option value="6">Đã hủy</option>
+                    </select>
+                }
+                else if (Model.FirstOrDefault().IDtinhtrang == 5)
+                {
+                    <select id="IDtinhtrang" name="IDtinhtrang">
+                        <option value="@Model.FirstOrDefault().IDtinhtrang">@Model.FirstOrDefault().TentinhtrangHD</option>
+                    </select>
+                }
+                else
+                {
+                    <select id="IDtinhtrang" name="IDtinhtrang">
+                        <option value="@Model.FirstOrDefault().IDtinhtrang">@Model.FirstOrDefault().TentinhtrangHD</option>
+                        <option value="6">Hủy đơn</option>
+                    </select>
+                }
+            </div>
+        </div>
+
+        <div class="form-group" style="float: right;">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+        }
+        <h3 class="col-md-10">Danh sách sản phẩm</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Tên sách</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Đơn giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Tensach)</td>
+                        <td><img src="~/Content/AnhSP/@item.Hinhanh" style="width:100px; height:140px;" /></td>
+                        <td>@Html.DisplayFor(modelItem => item.Soluong)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Tongdongia)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
